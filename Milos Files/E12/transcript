@@ -1,0 +1,43 @@
+# vsim -c -do "run -all; quit" debug_test12 
+# Start time: 19:20:59 on Oct 12,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2024.3 win64 Sep 10 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.debug_test12(fast)
+# run -all
+# Starting negative saturation phase...
+# Time: 30 | ptch: ff80 | integrator: 00000 | I_term: 0000 | P_term: 7b80 | PID_cntrl: 7ff
+# Time: 40 | ptch: ff80 | integrator: 3ff80 | I_term: 7ffe | P_term: 7b80 | PID_cntrl: b7e
+# Time: 50 | ptch: ff80 | integrator: 3ff80 | I_term: 7ffe | P_term: 7b80 | PID_cntrl: b7e
+# Time: 60 | ptch: ff80 | integrator: 3ff00 | I_term: 7ffc | P_term: 7b80 | PID_cntrl: b7c
+# Time: 70 | ptch: ff80 | integrator: 3ff00 | I_term: 7ffc | P_term: 7b80 | PID_cntrl: b7c
+# Time: 80 | ptch: ff80 | integrator: 3fe80 | I_term: 7ffa | P_term: 7b80 | PID_cntrl: b7a
+# Time: 90 | ptch: ff80 | integrator: 3fe80 | I_term: 7ffa | P_term: 7b80 | PID_cntrl: b7a
+# Time: 100 | ptch: ff80 | integrator: 3fe00 | I_term: 7ff8 | P_term: 7b80 | PID_cntrl: b78
+# Time: 110 | ptch: ff80 | integrator: 3fe00 | I_term: 7ff8 | P_term: 7b80 | PID_cntrl: b78
+# Time: 120 | ptch: ff80 | integrator: 3fd80 | I_term: 7ff6 | P_term: 7b80 | PID_cntrl: b76
+# 
+# After 2400 cycles of negative integration:
+# Time: 24120 | ptch: ff80 | integrator: 20000 | I_term: 7800 | P_term: 7b80 | PID_cntrl: 800
+# 
+# After changing to positive ptch:
+# Time: 24130 | ptch: 0040 | integrator: 20000 | I_term: 7800 | P_term: 0240 | D_term: 0000 | PID_sum: 7a40 | PID_cntrl: 7ff
+# 
+# Expected: I_term=7801, P_term=0240, PID_cntrl=A40-A42
+# ** Note: $finish    : debug_test12.sv(74)
+#    Time: 24130 ns  Iteration: 1  Instance: /debug_test12
+# End time: 19:21:03 on Oct 12,2025, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0

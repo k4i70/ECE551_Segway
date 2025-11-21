@@ -1,0 +1,15 @@
+I:/ECE551/E5/arith.sv {1 {vlog -work work -vopt -sv -stats=none I:/ECE551/E5/arith.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module arith
+
+Top level modules:
+	arith
+
+} {} {}} I:/ECE551/E5/arith_tb.sv {1 {vlog -work work -vopt -sv -stats=none I:/ECE551/E5/arith_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module arith_tb
+
+Top level modules:
+	arith_tb
+
+} {} {}}

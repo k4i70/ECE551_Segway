@@ -1,0 +1,36 @@
+I:/ECE551/E13/UART_TX_tb.sv {1 {vlog -work work -vopt -sv -stats=none I:/ECE551/E13/UART_TX_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module UART_TX_tb
+
+Top level modules:
+	UART_TX_tb
+
+} {} {}} I:/ECE551/E13/UART_tb.sv {1 {vlog -work work -vopt -sv -stats=none I:/ECE551/E13/UART_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module UART_tb
+
+Top level modules:
+	UART_tb
+
+} {} {}} I:/ECE551/E13/UART_rx.sv {1 {vlog -work work -vopt -sv -stats=none I:/ECE551/E13/UART_rx.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module UART_rx
+
+Top level modules:
+	UART_rx
+
+} {} {}} I:/ECE551/E13/UART_rx_tb.sv {1 {vlog -work work -vopt -sv -stats=none I:/ECE551/E13/UART_rx_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module UART_rx_tb
+
+Top level modules:
+	UART_rx_tb
+
+} {} {}} I:/ECE551/E13/UART_TX.sv {1 {vlog -work work -vopt -sv -stats=none I:/ECE551/E13/UART_TX.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module UART_TX
+
+Top level modules:
+	UART_TX
+
+} {} {}}

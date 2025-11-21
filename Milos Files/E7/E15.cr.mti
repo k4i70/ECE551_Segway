@@ -1,0 +1,22 @@
+I:/ECE551/E7/PID.sv {1 {vlog -work work -vopt -sv -stats=none I:/ECE551/E7/PID.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module PID
+
+Top level modules:
+	PID
+
+} {} {}} I:/ECE551/E7/PID_fastsim_tb.sv {1 {vlog -work work -vopt -sv -stats=none I:/ECE551/E7/PID_fastsim_tb.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module PID_dbg_tb
+
+Top level modules:
+	PID_dbg_tb
+
+} {} {}} I:/ECE551/E7/balance_cntrl.sv {1 {vlog -work work -vopt -sv -stats=none I:/ECE551/E7/balance_cntrl.sv
+Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module balance_cntrl
+
+Top level modules:
+	balance_cntrl
+
+} {} {}}

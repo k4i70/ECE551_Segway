@@ -1,0 +1,100 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/WINDOWS/system32
+T_opt
+!s110 1757519208
+VH7<zE2ng@3fZemi9Pb:SW0
+04 15 4 work synch_detect_tb fast 0
+=1-4cd717936f27-68c19d66-3e4-48cc
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U5 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2024.3;79
+vdff
+2I:/ECE551/E3/dff.v
+!s110 1757518907
+!i10b 1
+!s100 dM>GE3J[R01dhgBNF8kn43
+IN@J5F4NNcKeBbGYA^_]Nh1
+Z2 dI:/ECE551/E3
+w1757516324
+8I:/ECE551/E3/dff.v
+FI:/ECE551/E3/dff.v
+!i122 9
+L0 1 18
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OL;L;2024.3;79
+r1
+!s85 0
+31
+!s108 1757518907.000000
+!s107 I:/ECE551/E3/dff.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|I:/ECE551/E3/dff.v|
+!i113 0
+o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vsynch_detect
+2I:/ECE551/E3/synch_detect.sv
+Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1757519197
+!i10b 1
+!s100 nSZcE<2A9ZbSXEm;gkTRb2
+IhY:dYPi2DOzf@G<C]gZk41
+S1
+R2
+w1757519190
+8I:/ECE551/E3/synch_detect.sv
+FI:/ECE551/E3/synch_detect.sv
+!i122 12
+L0 1 35
+R3
+R4
+r1
+!s85 0
+31
+!s108 1757519196.000000
+!s107 I:/ECE551/E3/synch_detect.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ECE551/E3/synch_detect.sv|
+!i113 0
+Z6 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vsynch_detect_tb
+2I:/ECE551/E3/synch_detect_tb.sv
+R5
+!s110 1757518909
+!i10b 1
+!s100 k96Y=]gKCMkPNW^:<i<`C2
+IDLneoVncUF_OfOm2d8]EJ3
+S1
+R2
+w1757516184
+8I:/ECE551/E3/synch_detect_tb.sv
+FI:/ECE551/E3/synch_detect_tb.sv
+!i122 10
+L0 1 59
+R3
+R4
+r1
+!s85 0
+31
+!s108 1757518908.000000
+!s107 I:/ECE551/E3/synch_detect_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ECE551/E3/synch_detect_tb.sv|
+!i113 0
+R6
+R1

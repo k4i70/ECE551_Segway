@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Oct  1 10:49:30 2025
+Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+Revision Name : PWM11_test
+Top-level Entity Name : PWM11_test
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 38 / 22,320 ( < 1 % )
+    Total combinational functions : 32 / 22,320 ( < 1 % )
+    Dedicated logic registers : 27 / 22,320 ( < 1 % )
+Total registers : 27
+Total pins : 11 / 154 ( 7 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

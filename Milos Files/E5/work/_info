@@ -1,0 +1,98 @@
+m255
+K4
+z2
+Z0 !s12c _opt1
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+!s12c _opt
+R1
+!s11f vlog 2024.3 2024.09, Sep 10 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dC:/WINDOWS/system32
+T_opt
+!s110 1757949048
+VXGj^h^D0e_QaKkm1[nCnm0
+Z3 04 8 4 work arith_tb fast 0
+=1-4cd71793bb90-68c82c76-1b6-2160
+R1
+Z4 !s12f OEM100
+Z5 !s12b OEM100
+Z6 !s124 OEM10U2 
+Z7 !s135 nogc
+o-quiet -auto_acc_if_foreign -work work
+Z8 tCvgOpt 0
+n@_opt
+Z9 OL;O;2024.3;79
+R2
+T_opt1
+!s110 1757950214
+V<P9d1OlJkAod_6zUiV:Bo2
+R3
+=3-4cd71793bb90-68c83104-19b-3520
+R1
+R4
+R5
+R6
+R7
+o-quiet -auto_acc_if_foreign -work work +acc
+R8
+n@_opt1
+R9
+varith
+2I:/ECE551/E5/arith.sv
+Z10 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1757950195
+!i10b 1
+!s100 ?O3cknjko<?=l<cL;gI491
+I=[BG@TlA`DQUiYC^YC6O_0
+S1
+Z11 dI:/ECE551/E5
+w1757950187
+8I:/ECE551/E5/arith.sv
+FI:/ECE551/E5/arith.sv
+!i122 4
+L0 1 18
+Z12 VDg1SIo80bB@j0V0VzS_@n1
+Z13 OL;L;2024.3;79
+r1
+!s85 0
+31
+Z14 !s108 1757950195.000000
+!s107 I:/ECE551/E5/arith.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ECE551/E5/arith.sv|
+!i113 0
+Z15 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R8
+varith_tb
+2I:/ECE551/E5/arith_tb.sv
+R10
+!s110 1757950196
+!i10b 1
+!s100 [h42CNKOa]6K>jg0<`:9O2
+IfBD]CCbmI@1cdY7?aG9Sz1
+S1
+R11
+w1757949724
+8I:/ECE551/E5/arith_tb.sv
+FI:/ECE551/E5/arith_tb.sv
+!i122 5
+L0 2 60
+R12
+R13
+r1
+!s85 0
+31
+R14
+!s107 I:/ECE551/E5/arith_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|I:/ECE551/E5/arith_tb.sv|
+!i113 0
+R15
+R8
