@@ -2,7 +2,7 @@
 
 
 # Tests we want to run
-## Base functionality tests (Andrew)
+## Static functionality tests (Andrew)
 Startup test
 Step on test
 Rider off/step off test
