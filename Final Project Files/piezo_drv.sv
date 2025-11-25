@@ -44,6 +44,9 @@ module piezo_drv (
     
     logic [15:0] frequency;
     logic [31:0] duration;
+
+    // Guard flags
+    logic freq_invalid;
     
     // Generate increment values based on FAST_SIM parameter
     localparam DURATION_INC = FAST_SIM ? 64 : 1;
@@ -101,7 +104,9 @@ module piezo_drv (
         end
     end
     
-    assign period_target = (frequency == 0) ? 32'd1 : 
+    // Avoid dividing by zero or unknown frequency values during initialization
+    assign freq_invalid = ((^frequency) === 1'bX) || (frequency == 16'd0);
+    assign period_target = freq_invalid ? 32'd1 :
                            (FAST_SIM) ? ((50_000_000 / 64) / frequency) : (50_000_000 / frequency);
     assign period_done = (period_cnt >= period_target);
     

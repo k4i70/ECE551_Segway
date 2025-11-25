@@ -1,6 +1,25 @@
 m255
 K4
 z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2024.3_2 2024.11, Nov 25 2024
 13
 !s112 1.1
 !i10d 8192
@@ -8,3 +27,659 @@ z2
 !i10f 100
 cModel Technology
 dC:/Windows/system32
+T_opt
+!s110 1764048522
+Vfk8Bmzo[EDI9PYJ7j2PV;1
+04 19 4 work Segway_Static_tests fast 0
+=9-000ae431a4f1-69253e8a-1120b-b0bef
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM100
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+OE;O;2024.3_2;79
+vA2D_intf
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/A2D_Intf.sv
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z4 !s110 1764047250
+!i10b 1
+!s100 _Re>MQLol^3S8MOl_l3>B2
+ILl3POCEIGi0g?_8n9Q0mK3
+S1
+Z5 d/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files
+Z6 w1764001716
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/A2D_Intf.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/A2D_Intf.sv
+!i122 113
+L0 1 203
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OE;L;2024.3_2;79
+r1
+!s85 0
+31
+!s108 1764047249.000000
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/A2D_Intf.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/A2D_Intf.sv|
+!i113 0
+Z9 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+n@a2@d_intf
+vADC128S_FC
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/ADC128S_FC.sv
+R3
+R4
+!i10b 1
+!s100 n1UPndo6Ol_azTTf4hd=N2
+InOGKTnFGh3hS[L?=Dz15S3
+S1
+R5
+R6
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/ADC128S_FC.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/ADC128S_FC.sv
+!i122 114
+L0 1 114
+R7
+R8
+r1
+!s85 0
+31
+Z10 !s108 1764047250.000000
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/ADC128S_FC.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/ADC128S_FC.sv|
+!i113 0
+R9
+R2
+n@a@d@c128@s_@f@c
+vAuth_blk
+Z11 2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/auth_blk.sv
+R3
+R4
+!i10b 1
+!s100 ?LHF;[KfA9]MM^YC9Ea<82
+ICA3ln`oZILV2J1z?7IiF=0
+S1
+R5
+w1764045481
+Z12 8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/auth_blk.sv
+Z13 F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/auth_blk.sv
+!i122 115
+Z14 L0 1 80
+R7
+R8
+r1
+!s85 0
+31
+R10
+Z15 !s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/auth_blk.sv|
+Z16 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/auth_blk.sv|
+!i113 0
+R9
+R2
+n@auth_blk
+vauth_blk
+R11
+R3
+!s110 1764045426
+!i10b 1
+!s100 EXLhj^ATe0M4n`?QRVm=U0
+Ik?:;HOGfJlEVo_;DV85Nd3
+S1
+R5
+Z17 w1764001717
+R12
+R13
+!i122 46
+R14
+R7
+R8
+r1
+!s85 0
+31
+!s108 1764045426.000000
+R15
+R16
+!i113 0
+R9
+R2
+vbalance_cntrl
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/balance_cntrl.sv
+R3
+R4
+!i10b 1
+!s100 QOXO2:3ejZ>4;f>:Y@Nb81
+I[[E:mB;O1C_U`J=2ok`J82
+S1
+R5
+R17
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/balance_cntrl.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/balance_cntrl.sv
+!i122 116
+L0 1 49
+R7
+R8
+r1
+!s85 0
+31
+R10
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/balance_cntrl.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/balance_cntrl.sv|
+!i113 0
+R9
+R2
+vinert_intf
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/inert_intf.sv
+R3
+R4
+!i10b 1
+!s100 WGn7U<kFaCU_bD:UTM^bY2
+IUiGL=mRz[fUXIG8_FTgaP3
+S1
+R5
+R17
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/inert_intf.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/inert_intf.sv
+!i122 117
+L0 1 215
+R7
+R8
+r1
+!s85 0
+31
+R10
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/inert_intf.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/inert_intf.sv|
+!i113 0
+R9
+R2
+vinertial_integrator
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/inertial_integrator.sv
+R3
+R4
+!i10b 1
+!s100 D72bA59T;9_j;>Onih;Ha0
+I:XWFjzEz`bNEel`Pizdo73
+S1
+R5
+R17
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/inertial_integrator.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/inertial_integrator.sv
+!i122 118
+L0 1 54
+R7
+R8
+r1
+!s85 0
+31
+R10
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/inertial_integrator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/inertial_integrator.sv|
+!i113 0
+R9
+R2
+vmtr_drv
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/mtr_drv.sv
+R3
+R4
+!i10b 1
+!s100 7GEG`fk;9kc9eb3XiY6oz0
+IHOMUZWB6OL3fFEaOhPK`<2
+S1
+R5
+R17
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/mtr_drv.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/mtr_drv.sv
+!i122 119
+L0 1 138
+R7
+R8
+r1
+!s85 0
+31
+R10
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/mtr_drv.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/mtr_drv.sv|
+!i113 0
+R9
+R2
+vPB_release
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/PB_release.sv
+R3
+R4
+!i10b 1
+!s100 G8jOI75=6ae5BH^QG;DDO1
+I?i1NjRLG^hO6D@Udmj2QZ2
+S1
+R5
+R6
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/PB_release.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/PB_release.sv
+!i122 120
+L0 4 26
+R7
+R8
+r1
+!s85 0
+31
+R10
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/PB_release.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/PB_release.sv|
+!i113 0
+R9
+R2
+n@p@b_release
+vPID
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/PID.sv
+R3
+R4
+!i10b 1
+!s100 9b8E>klecUA;2e<QSg1J80
+IdQMSJS@b8KJdNfQaD8SR@0
+S1
+R5
+R17
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/PID.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/PID.sv
+!i122 121
+L0 1 146
+R7
+R8
+r1
+!s85 0
+31
+R10
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/PID.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/PID.sv|
+!i113 0
+R9
+R2
+n@p@i@d
+vpiezo_drv
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv
+R3
+R4
+!i10b 1
+!s100 Q1V_=EezL`ZImFJgd4Q4k1
+I?]ji3V4?KXE^[Mh5b1dWT1
+S1
+R5
+w1764046232
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv
+!i122 122
+L0 1 255
+R7
+R8
+r1
+!s85 0
+31
+R10
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv|
+!i113 0
+R9
+R2
+vPWM11
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/PWM11.sv
+R3
+R4
+!i10b 1
+!s100 e:71Wi;lO=IAF5i_m39Go0
+I<550]>ML7cclePX26[:?42
+S1
+R5
+w1764045590
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/PWM11.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/PWM11.sv
+!i122 123
+L0 3 73
+R7
+R8
+r1
+!s85 0
+31
+R10
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/PWM11.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/PWM11.sv|
+!i113 0
+R9
+R2
+n@p@w@m11
+vrst_synch
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/rst_synch.sv
+R3
+Z18 !s110 1764047251
+!i10b 1
+!s100 AW_Z[ZLfiK7Za68ahnci80
+IffoN_2z1>k:V>N725UOV:0
+S1
+R5
+R17
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/rst_synch.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/rst_synch.sv
+!i122 124
+L0 1 25
+R7
+R8
+r1
+!s85 0
+31
+R10
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/rst_synch.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/rst_synch.sv|
+!i113 0
+R9
+R2
+vSegway
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv
+R3
+!s110 1764048518
+!i10b 1
+!s100 nXHhRNI3F?[D:n3QiaW5U2
+IK^MkG77h2CaaSa^4HM=JN1
+S1
+R5
+w1764048514
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv
+!i122 139
+L0 1 102
+R7
+R8
+r1
+!s85 0
+31
+!s108 1764048518.000000
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv|
+!i113 0
+R9
+R2
+n@segway
+vSegway_Static_tests
+Z19 2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv
+R3
+DXx4 work 13 tests_package 0 22 Z2nU^H9Bjd`2Nd0if]TnZ0
+!s110 1764047575
+!i10b 1
+!s100 OHObMhhJ5YaFnENGS^dK83
+IJL498c2Cn0DF@KKEg45z52
+S1
+R5
+w1764047568
+Z20 8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv
+Z21 F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv
+!i122 135
+L0 3 106
+R7
+R8
+r1
+!s85 0
+31
+!s108 1764047575.000000
+!s107 tests_package.sv|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv|
+Z22 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv|
+!i113 0
+R9
+R2
+n@segway_@static_tests
+vSegway_tb
+R19
+R3
+!s110 1764045369
+!i10b 1
+!s100 @^zUSh:=9Fh[D4UXZAUdE2
+IDMHQDG_45bETjK0GPaHLo3
+S1
+R5
+w1764044772
+R20
+R21
+!i122 35
+L0 1 230
+R7
+R8
+r1
+!s85 0
+31
+!s108 1764045369.000000
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv|
+R22
+!i113 0
+R9
+R2
+n@segway_tb
+vSegwayMath
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SegwayMath.sv
+R3
+R18
+!i10b 1
+!s100 ]jQm0EkVoLogmG[jj9kh<1
+IX9Po7fbHSdWk196`3GE9F3
+S1
+R5
+R17
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SegwayMath.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SegwayMath.sv
+!i122 126
+L0 1 97
+R7
+R8
+r1
+!s85 0
+31
+Z23 !s108 1764047251.000000
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SegwayMath.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SegwayMath.sv|
+!i113 0
+R9
+R2
+n@segway@math
+vSegwayModel
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SegwayModel.sv
+R3
+R18
+!i10b 1
+!s100 iz^E?Y=h=5@SlL;FS;BlO2
+IJ1lHC3aJ[iNITL6ICC^G@1
+S1
+R5
+R17
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SegwayModel.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SegwayModel.sv
+!i122 127
+L0 1 454
+R7
+R8
+r1
+!s85 0
+31
+R23
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SegwayModel.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SegwayModel.sv|
+!i113 0
+R9
+R2
+n@segway@model
+vSPI_ADC128S
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SPI_ADC128S.sv
+R3
+R18
+!i10b 1
+!s100 93oj0i;UV@::cHMPGHMJ>1
+IzaA`2aUlUb[3DIfIA^4Aa1
+S1
+R5
+R17
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SPI_ADC128S.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SPI_ADC128S.sv
+!i122 128
+L0 1 140
+R7
+R8
+r1
+!s85 0
+31
+R23
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SPI_ADC128S.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SPI_ADC128S.sv|
+!i113 0
+R9
+R2
+n@s@p@i_@a@d@c128@s
+vSPI_mnrch
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SPI_mnrch.sv
+R3
+R18
+!i10b 1
+!s100 `nl@<@G@28c6dW3:5g0KK2
+Ink2QQ0ZDTT3h>e9Bz>i;b0
+S1
+R5
+R17
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SPI_mnrch.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SPI_mnrch.sv
+!i122 129
+L0 1 169
+R7
+R8
+r1
+!s85 0
+31
+R23
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SPI_mnrch.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SPI_mnrch.sv|
+!i113 0
+R9
+R2
+n@s@p@i_mnrch
+vsteer_en
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/steer_en.sv
+R3
+R18
+!i10b 1
+!s100 XF961:T^RbXE=WW`gmgc63
+IO_]e<LBf1XMS4L`MPfbc]0
+S1
+R5
+R17
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/steer_en.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/steer_en.sv
+!i122 130
+L0 1 82
+R7
+R8
+r1
+!s85 0
+31
+R23
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/steer_en.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/steer_en.sv|
+!i113 0
+R9
+R2
+vsteer_en_SM
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/steer_en_SM.sv
+R3
+R18
+!i10b 1
+!s100 d6J>A1EJGX:>Ic<[m80[`0
+IM]k_iTnSBUoE8YgiX7>Hg1
+S1
+R5
+R17
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/steer_en_SM.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/steer_en_SM.sv
+!i122 131
+L0 1 106
+R7
+R8
+r1
+!s85 0
+31
+R23
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/steer_en_SM.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/steer_en_SM.sv|
+!i113 0
+R9
+R2
+nsteer_en_@s@m
+Xtests_package
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/tests_package.sv
+R3
+!s110 1764048447
+!i10b 1
+!s100 beD7ShQnF?X5>j1M6D9gO3
+I`UNWaXQnFmh;n=2WWN0Wm1
+S1
+R5
+w1764048443
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/tests_package.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/tests_package.sv
+!i122 138
+L0 1 0
+V`UNWaXQnFmh;n=2WWN0Wm1
+R8
+r1
+!s85 0
+31
+!s108 1764048447.000000
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/tests_package.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/tests_package.sv|
+!i113 0
+R9
+R2
+vUART_RX
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/UART_RX.sv
+R3
+R18
+!i10b 1
+!s100 ^79G:MiO:@H0KYn^3GY[g2
+I^?QCQR7OB:Mg0Q]Cgaf0:1
+S1
+R5
+R17
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/UART_RX.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/UART_RX.sv
+!i122 132
+L0 3 136
+R7
+R8
+r1
+!s85 0
+31
+R23
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/UART_RX.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/UART_RX.sv|
+!i113 0
+R9
+R2
+n@u@a@r@t_@r@x
+vUART_TX
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/UART_TX.sv
+R3
+R18
+!i10b 1
+!s100 >[oZAJ^HVOlDI4]feS1Z71
+IXLWahJjLg`K[]JcO[Ta>?0
+S1
+R5
+R17
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/UART_TX.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/UART_TX.sv
+!i122 133
+L0 9 130
+R7
+R8
+r1
+!s85 0
+31
+R23
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/UART_TX.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/UART_TX.sv|
+!i113 0
+R9
+R2
+n@u@a@r@t_@t@x

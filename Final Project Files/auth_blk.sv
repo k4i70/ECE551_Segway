@@ -1,4 +1,4 @@
-module auth_blk (
+module Auth_blk (
     input logic RX,
     input logic clk, rst_n,
     output logic pwr_up,

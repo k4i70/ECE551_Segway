@@ -1,4 +1,4 @@
-module Segway_tb();
+module Segway_tb_moving_tests();
 `timescale 1ns/1ps
 //// Interconnects to DUT/support defined as type wire /////
 wire SS_n,SCLK,MOSI,MISO,INT;				// to inertial sensor

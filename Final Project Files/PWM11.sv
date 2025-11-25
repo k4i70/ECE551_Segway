@@ -5,7 +5,7 @@ module PWM11 (
     input logic rst_n, // Active low reset
     input logic [10:0] duty, // Specifies duty cycle (unsigned 12-bit)
     output logic PWM1, PWM2, // Complementary glitch free PWM signals with non-overlap
-    output logic PWM_sync, // Used to sync changes in duty cycle
+    output logic PWM_synch, // Used to sync changes in duty cycle
     output logic ovr_I_blank // Used to blank out over current mitigation
 );
 
@@ -63,8 +63,8 @@ module PWM11 (
     end
 
 
-    // PWM_sync logic
-    assign PWM_sync= ~|cnt;
+    // PWM_synch logic
+    assign PWM_synch= ~|cnt;
 
     // ovr_I_blank is high when NONOVERLAP<cnt<NONOVERLAP+128
     // OR when NONOVERLAP+duty<cnt<NONOVERLAP+duty+128
