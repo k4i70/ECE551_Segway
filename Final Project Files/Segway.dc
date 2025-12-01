@@ -66,7 +66,7 @@ set_multicycle_path 1 -hold -from [find pin */clk_r_REG*_S*/CLK] -to [find pin i
 set_boundary_optimization true
 set_optimize_registers true
 set_critical_range 0.25 [current_design]
-set_max_fanout 4 [current_design]
+set_max_fanout 3 [current_design]
 
 #set_prefer saed32rvt_tt0p85v25c/INVX2_RVT
 #set_dont_use saed32rvt_tt0p85v25c/INVX0_RVT
@@ -77,6 +77,15 @@ ungroup -all -flatten
 #second compile
 set_fix_hold clk
 compile -map_effort high
+
+# Enable aggressive timing optimization
+set_app_var compile_timing_high_effort true
+set_app_var compile_timing_critical_range true
+
+# Multiple incremental high-effort compiles
+compile -incremental_mapping -map_effort high
+compile -incremental_mapping -map_effort high
+compile -incremental_mapping -map_effort high
 
 ungroup -all -flatten
 
