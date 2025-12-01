@@ -58,6 +58,8 @@ rst_synch iRST(.clk(clk),.RST_n(RST_n),.rst_n(rst_n));
 // Monitored DUT internals for reusable task package
 logic pwr_up_mon, en_steer_mon, rider_off_mon, batt_low_mon;
 logic piezo_mon;
+logic [7:0] ss_tmr_mon;
+logic signed [11:0] lft_spd_mon, rght_spd_mon;
 
 always_comb begin
   pwr_up_mon   = iDUT.pwr_up;
@@ -65,6 +67,9 @@ always_comb begin
   rider_off_mon = iDUT.rider_off;
   batt_low_mon = iDUT.batt_low;
   piezo_mon = piezo;
+  ss_tmr_mon = iDUT.iBAL.pid_inst.ss_tmr;
+  lft_spd_mon = iDUT.lft_spd;
+  rght_spd_mon = iDUT.rght_spd;
 end
 
 // ---------------------------------------------------------------------------
@@ -97,6 +102,16 @@ initial begin
   disconnection_test(clk, ld_cell_lft, ld_cell_rght,
                      cmd_sent, send_cmd, cmd,
                      pwr_up_mon, en_steer_mon, rider_off_mon);
+  
+  // New Trevor tests
+  soft_start_test(clk, ld_cell_lft, ld_cell_rght, steerPot, rider_lean,
+                  cmd_sent, send_cmd, cmd, pwr_up_mon, en_steer_mon, rider_off_mon,
+                  ss_tmr_mon, lft_spd_mon, rght_spd_mon);
+  weight_hysteresis_test(clk, ld_cell_lft, ld_cell_rght, steerPot, rider_lean,
+                         cmd_sent, send_cmd, cmd, pwr_up_mon, en_steer_mon, rider_off_mon);
+  steer_pot_saturation_test(clk, ld_cell_lft, ld_cell_rght, steerPot, rider_lean,
+                            cmd_sent, send_cmd, cmd, pwr_up_mon, en_steer_mon, rider_off_mon,
+                            lft_spd_mon, rght_spd_mon);
 
   $display("[%0t] All Segway static tests completed successfully", $time);
   $stop();
