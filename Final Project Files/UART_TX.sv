@@ -63,26 +63,26 @@ module UART_TX (
 
 
     // Always FF to manage TX output
-    // Depending on {load, shift} will either load {tx_data, 1'b0}, right shift, or hold. 
-    // Pass in {1'b1, tx_data, 1'b0} to shift register on load
-    // Right shift passes in 1'b1 for idle state
-    always_ff @(posedge clk or negedge rst_n) begin
-        if (!rst_n) begin
-            shift_reg <= 10'b1111111111; // Idle state is high
-            TX <= 1'b1;
-        end else if (load) begin
+// Depending on {load, shift} will either load {tx_data, 1'b0}, right shift, or hold. 
+// Pass in {1'b1, tx_data, 1'b0} to shift register on load
+// Right shift passes in 1'b1 for idle state
+always_ff @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        shift_reg <= 10'b1111111111; // Idle state is high
+        TX <= 1'b1;
+    end else begin
+        // Handle shift register
+        if (load) begin
             shift_reg <= {1'b1, tx_data, 1'b0}; // Load stop, data, start (MSB to LSB)
         end else if (shift && (baud_cnt == 13'd5208)) begin
             shift_reg <= {1'b1, shift_reg[9:1]}; // Shift right, fill with 1
         end
+        // shift_reg holds its value if neither load nor shift
         
         // TX always outputs the LSB of shift register
-        if (!rst_n) begin
-            TX <= 1'b1;
-        end else begin
-            TX <= shift_reg[0];
-        end
+        TX <= shift_reg[0];
     end
+end
 
     // SR Latch to manage tx_done with set_done signal or load signal setting tx_done
     always_ff @(posedge clk or negedge rst_n) begin
