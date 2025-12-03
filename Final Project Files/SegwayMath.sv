@@ -15,8 +15,8 @@ module SegwayMath (
 
     // Internal signals
     logic signed [11:0] PID_ss;
-    logic signed [11:0] steer_pot_sat;
-    logic signed [11:0] steer_signed;
+    logic [11:0] steer_pot_sat;
+    logic signed [12:0] steer_signed;
     logic signed [12:0] steer_term;
     logic signed [12:0] lft_torque;
     logic signed [12:0] rght_torque;
@@ -42,14 +42,12 @@ module SegwayMath (
     assign PID_ss = $signed(PID_ss_high) >>> 8; // Signed 12-bit quantity
 
     // Create a saturation of steer_pot to 0x200 to 0xE00
-    // Saturate steer_pot to 0x200 (512) to 0xE00 (3584) using bitwise logic
-    // 0x200 = 12'b0010_0000_0000, 0xE00 = 12'b1110_0000_0000
-    assign steer_pot_sat = steer_pot[11] ? 12'hE00 : // Above upper bound
-                       (~|steer_pot[11:9]) ? 12'h200 : // Below lower bound
-                       steer_pot; // In range
+    assign steer_pot_sat = (steer_pot <= 12'h200) ? 12'h200 :
+                           (steer_pot >= 12'hE00) ? 12'hE00 :
+                           steer_pot;
 
-    // Convert to signed by subtracting 12'h7FF
-    assign steer_signed = $signed({1'b0, steer_pot_sat}) - 12'h7ff; // Signed 12-bit quantity
+    // Convert to signed by subtracting midscale (0x800)
+    assign steer_signed = $signed({1'b0, steer_pot_sat}) - 13'sd2048;
 
     // Scale by 3/16 using bit shifts like SegwayMath2
     assign steer_term = (steer_signed >>> 3) + (steer_signed >>> 4); // 3/16 scaling
@@ -90,7 +88,11 @@ module SegwayMath (
     assign rght_spd = rght_spd_unsat[11:0]; // Truncate to 12 bits
 
     // Overspeed detection - only check positive speeds like SegwayMath2
-    assign too_fast = (lft_spd > 12'sd1536) || (rght_spd > 12'sd1536);
+    // Check if either greater than d1792, either positive or negative
+    assign too_fast = (lft_spd > 12'sd1792) ||
+                      (lft_spd < -12'sd1792) ||
+                      (rght_spd > 12'sd1792) ||
+                      (rght_spd < -12'sd1792);
 
 
 

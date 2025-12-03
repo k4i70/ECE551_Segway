@@ -1,11 +1,30 @@
+BEGIN 1:mtr_drv:fast:work
+    OVR_I_shtdwn :  1:Segway_moving_tests_2:fast:work
+END 
 BEGIN 1:PID:fast:work
-    ss_tmr :  1:Segway_Static_tests:fast:work
+    ss_tmr :  1:Segway_moving_tests_2:fast:work
 END 
 BEGIN 1:Segway:fast:work
-    batt_low :  1:Segway_Static_tests:fast:work
-    rider_off :  1:Segway_Static_tests:fast:work
-    rght_spd :  1:Segway_Static_tests:fast:work
-    en_steer :  1:Segway_Static_tests:fast:work
-    pwr_up :  1:Segway_Static_tests:fast:work
-    lft_spd :  1:Segway_Static_tests:fast:work
+    pwr_up :  1:Segway_moving_tests_2:fast:work
+    en_steer :  1:Segway_moving_tests_2:fast:work
+    rider_off :  1:Segway_moving_tests_2:fast:work
+    rght_spd :  1:Segway_moving_tests_2:fast:work
+    batt_low :  1:Segway_moving_tests_2:fast:work
+    lft_spd :  1:Segway_moving_tests_2:fast:work
+    too_fast :  1:Segway_moving_tests_2:fast:work
+END 
+BEGIN 1:SegwayMath:fast:work
+    lft_torque_shaped :  1:Segway_moving_tests_2:fast:work
+    rght_spd :  1:Segway_moving_tests_2:fast:work
+    rght_torque :  1:Segway_moving_tests_2:fast:work
+    lft_spd :  1:Segway_moving_tests_2:fast:work
+    lft_torque :  1:Segway_moving_tests_2:fast:work
+    rght_spd_unsat :  1:Segway_moving_tests_2:fast:work
+    PID_ss_high :  1:Segway_moving_tests_2:fast:work
+    lft_spd_unsat :  1:Segway_moving_tests_2:fast:work
+    PID_ss :  1:Segway_moving_tests_2:fast:work
+    rght_torque_shaped :  1:Segway_moving_tests_2:fast:work
+END 
+BEGIN 1:balance_cntrl:fast:work
+    PID_cntrl :  1:Segway_moving_tests_2:fast:work
 END 

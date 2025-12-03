@@ -1,6 +1,12 @@
+BEGIN 1:mtr_drv:fast:work
+    OVR_I_shtdwn :  1:Segway_tb_moving_tests:fast:work
+END 
 BEGIN 1:Segway:fast:work
-    en_steer :  1:Segway_Static_tests:fast:work
-    rider_off :  1:Segway_Static_tests:fast:work
-    batt_low :  1:Segway_Static_tests:fast:work
-    pwr_up :  1:Segway_Static_tests:fast:work
+    too_fast :  1:Segway_tb_moving_tests:fast:work
+    batt_low :  1:Segway_tb_moving_tests:fast:work
+    rght_spd :  1:Segway_tb_moving_tests:fast:work
+    lft_spd :  1:Segway_tb_moving_tests:fast:work
+    pwr_up :  1:Segway_tb_moving_tests:fast:work
+    en_steer :  1:Segway_tb_moving_tests:fast:work
+    rider_off :  1:Segway_tb_moving_tests:fast:work
 END 

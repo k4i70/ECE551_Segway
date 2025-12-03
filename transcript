@@ -1,476 +1,73 @@
-# //  Questa Sim
-# //  Version 2024.3_2 linux Nov 25 2024
-# //
-# // Unpublished work. Copyright 2024 Siemens
-# //
-# // This material contains trade secrets or otherwise confidential information
-# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
-# // "SISW"), or its licensors. Access to and use of this information is strictly
-# // limited as set forth in the Customer's applicable agreements with SISW.
-# //
-# // This material may not be copied, distributed, or otherwise disclosed outside
-# // of the Customer's facilities without the express written permission of SISW,
-# // and may not be used in any way not expressly authorized by SISW.
-# //
-project open {/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.mpf}
-# Loading project Segway
-# Compile of A2D_Intf.sv was successful.
-# Compile of ADC128S_FC.sv was successful.
-# Compile of auth_blk.sv was successful.
-# Compile of balance_cntrl.sv was successful.
-# Compile of inert_intf.sv was successful.
-# Compile of inertial_integrator.sv was successful.
-# Compile of mtr_drv.sv was successful.
-# Compile of PB_release.sv was successful.
-# Compile of PID.sv was successful.
-# Compile of piezo_drv.sv was successful.
-# Compile of PWM11.sv was successful.
-# Compile of rst_synch.sv was successful.
-# Compile of Segway.sv was successful.
-# Compile of Segway_Static_tests.sv was successful.
-# Compile of Segway_tb_moving_tests.sv failed with 1 errors.
-# Compile of SegwayMath.sv was successful.
-# Compile of SegwayModel.sv was successful with warnings.
-# Compile of SPI_ADC128S.sv was successful.
-# Compile of SPI_mnrch.sv was successful.
-# Compile of steer_en.sv was successful.
-# Compile of steer_en_SM.sv was successful.
-# Compile of UART_RX.sv was successful.
-# Compile of UART_TX.sv was successful.
-# 23 compiles, 1 failed with 1 error.
-# Compile of A2D_Intf.sv was successful.
-# Compile of ADC128S_FC.sv was successful.
-# Compile of auth_blk.sv was successful.
-# Compile of balance_cntrl.sv was successful.
-# Compile of inert_intf.sv was successful.
-# Compile of inertial_integrator.sv was successful.
-# Compile of mtr_drv.sv was successful.
-# Compile of PB_release.sv was successful.
-# Compile of PID.sv was successful.
-# Compile of piezo_drv.sv was successful.
-# Compile of PWM11.sv was successful.
-# Compile of rst_synch.sv was successful.
-# Compile of Segway.sv was successful.
-# Compile of Segway_Static_tests.sv was successful.
-# Compile of SegwayMath.sv was successful.
-# Compile of SegwayModel.sv was successful with warnings.
-# Compile of SPI_ADC128S.sv was successful.
-# Compile of SPI_mnrch.sv was successful.
-# Compile of steer_en.sv was successful.
-# Compile of steer_en_SM.sv was successful.
-# Compile of UART_RX.sv was successful.
-# Compile of UART_TX.sv was successful.
-# 22 compiles, 0 failed with no errors.
-# Load canceled
-# Load canceled
-# Load canceled
-# Compile of A2D_Intf.sv was successful.
-# Compile of ADC128S_FC.sv was successful.
-# Compile of auth_blk.sv was successful.
-# Compile of balance_cntrl.sv was successful.
-# Compile of inert_intf.sv was successful.
-# Compile of inertial_integrator.sv was successful.
-# Compile of mtr_drv.sv was successful.
-# Compile of PB_release.sv was successful.
-# Compile of PID.sv was successful.
-# Compile of piezo_drv.sv was successful.
-# Compile of PWM11.sv was successful.
-# Compile of rst_synch.sv was successful.
-# Compile of Segway.sv was successful.
-# Compile of Segway_Static_tests.sv was successful.
-# Compile of SegwayMath.sv was successful.
-# Compile of SegwayModel.sv was successful with warnings.
-# Compile of SPI_ADC128S.sv was successful.
-# Compile of SPI_mnrch.sv was successful.
-# Compile of steer_en.sv was successful.
-# Compile of steer_en_SM.sv was successful.
-# Compile of UART_RX.sv was successful.
-# Compile of UART_TX.sv was successful.
-# 22 compiles, 0 failed with no errors.
-vsim work.Segway_Static_tests
-# vsim work.Segway_Static_tests 
-# Start time: 22:37:16 on Nov 24,2025
-# ** Note: (vsim-3812) Design is being optimized...
+# vlib work_tb
+# ** Warning: (vlib-34) Library already exists at "work_tb".
+# Errors: 0, Warnings: 1
+#  vmap work work_tb
+# QuestaSim vmap 2024.3_2 Lib Mapping Utility 2024.11 Nov 25 2024
+# vmap work work_tb 
+# Modifying modelsim.ini
+#  cd {Final Project Files}
+# reading /cae/apps/data/mentor-2024/questasim/linux/../modelsim.ini
+#  vlog +acc *.sv
+# QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+# Start time: 11:57:24 on Dec 03,2025
+# vlog "+acc" A2D_Intf.sv ADC128S.sv ADC128S_FC.sv PB_release.sv PID.sv PWM11.sv SPI_ADC128S.sv SPI_mnrch.sv Segway.sv SegwayMath.sv SegwayModel.sv Segway_Static_tests.sv Segway_moving_tests_2.sv Segway_tb_moving_tests.sv UART_RX.sv UART_TX.sv UART_rx.sv auth_blk.sv balance_cntrl.sv inert_intf.sv inertial_integrator.sv mtr_drv.sv piezo_drv.sv rst_synch.sv steer_en.sv steer_en_SM.sv tests_package.sv 
+# -- Compiling module A2D_intf
+# -- Compiling module ADC128S
+# -- Compiling module ADC128S_FC
+# -- Compiling module PB_release
+# -- Compiling module PID
+# -- Compiling module PWM11
+# -- Compiling module SPI_ADC128S
+# -- Compiling module SPI_mnrch
+# -- Compiling module Segway
+# -- Compiling module SegwayMath
+# -- Compiling module SegwayModel
+# ** Warning: SegwayModel.sv(141): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: SegwayModel.sv(254): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: SegwayModel.sv(256): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# -- Compiling package tests_package
+# -- Compiling module Segway_Static_tests
+# -- Importing package tests_package
+# -- Compiling package tests_package
+# ** Warning: ** while parsing file included at Segway_moving_tests_2.sv(1)
+# ** at tests_package.sv(1): (vlog-2275) Existing package 'tests_package' at line 1 will be overwritten.
+# -- Compiling module Segway_moving_tests_2
+# -- Compiling module Segway_tb_moving_tests
+# -- Compiling module UART_RX
+# -- Compiling module UART_TX
+# -- Compiling module UART_rx
+# -- Compiling module Auth_blk
+# -- Compiling module balance_cntrl
+# -- Compiling module inert_intf
+# -- Compiling module inertial_integrator
+# -- Compiling module mtr_drv
+# -- Compiling module piezo_drv
+# -- Compiling module rst_synch
+# -- Compiling module steer_en
+# -- Compiling module steer_en_SM
+# -- Compiling package tests_package
+# ** Warning: tests_package.sv(1): (vlog-2275) Existing package 'tests_package' at line 1 will be overwritten.
+# 
+# Top level modules:
+# 	ADC128S
+# 	PB_release
+# 	Segway_Static_tests
+# 	Segway_moving_tests_2
+# 	Segway_tb_moving_tests
+# 	UART_rx
+# End time: 11:57:24 on Dec 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 5
+#  vsim work.Segway_moving_tests_2
+# vsim work.Segway_moving_tests_2 
+# Start time: 11:57:24 on Dec 03,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
 # Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
-# ** Error: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv(44): Module 'Auth_blk' is not defined.
-#  For instance 'iAuth' at path 'Segway_Static_tests.iDUT'
-# ** Error: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv(47): Module 'UART_tx' is not defined.
-#  For instance 'iTX' at path 'Segway_Static_tests'
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error (suppressible): Segway_moving_tests_2.sv(356): (vopt-7063) Failed to find 'apply_reset' in hierarchical name 'apply_reset'.
+#         Region: Segway_moving_tests_2
 # Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=0.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
 # Error loading design
-# End time: 22:37:18 on Nov 24,2025, Elapsed time: 0:00:02
-# Errors: 2, Warnings: 6
-# Compile of A2D_Intf.sv was successful.
-# Compile of ADC128S_FC.sv was successful.
-# Compile of auth_blk.sv was successful.
-# Compile of balance_cntrl.sv was successful.
-# Compile of inert_intf.sv was successful.
-# Compile of inertial_integrator.sv was successful.
-# Compile of mtr_drv.sv was successful.
-# Compile of PB_release.sv was successful.
-# Compile of PID.sv was successful.
-# Compile of piezo_drv.sv was successful.
-# Compile of PWM11.sv was successful.
-# Compile of rst_synch.sv was successful.
-# Compile of Segway.sv was successful.
-# Compile of Segway_Static_tests.sv was successful.
-# Compile of SegwayMath.sv was successful.
-# Compile of SegwayModel.sv was successful with warnings.
-# Compile of SPI_ADC128S.sv was successful.
-# Compile of SPI_mnrch.sv was successful.
-# Compile of steer_en.sv was successful.
-# Compile of steer_en_SM.sv was successful.
-# Compile of UART_RX.sv was successful.
-# Compile of UART_TX.sv was successful.
-# 22 compiles, 0 failed with no errors.
-vsim work.Segway_Static_tests
-# vsim work.Segway_Static_tests 
-# Start time: 22:38:39 on Nov 24,2025
-# ** Note: (vsim-3812) Design is being optimized...
-# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
-# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/A2D_Intf.sv(81): (vopt-2241) Connection width does not match width of port 'rd_data'. The port definition is at: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SPI_mnrch.sv(10).
-# ** Error (suppressible): /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/mtr_drv.sv(59): (vopt-2912) Port 'PWM_synch' not found in module 'PWM11' (4th connection).
-# ** Error (suppressible): /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/mtr_drv.sv(57): (vopt-2912) Port 'PWM_synch' not found in module 'PWM11' (4th connection).
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=1.
-# Error loading design
-# End time: 22:38:40 on Nov 24,2025, Elapsed time: 0:00:01
-# Errors: 2, Warnings: 3
-# Compile of PWM11.sv was successful.
-vsim work.Segway_Static_tests
-# vsim work.Segway_Static_tests 
-# Start time: 22:40:01 on Nov 24,2025
-# ** Note: (vsim-3812) Design is being optimized...
-# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
-# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/A2D_Intf.sv(81): (vopt-2241) Connection width does not match width of port 'rd_data'. The port definition is at: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SPI_mnrch.sv(10).
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv(75): (vopt-2685) [TFMPC] - Too few port connections for 'iDRV'.  Expected 11, found 10.
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv(75): (vopt-2718) [TFMPC] - Missing connection for port 'OVR_I_shtdwn'.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=3.
-# Loading sv_std.std
-# Loading work.Segway_Static_tests(fast)
-run -all
-# ** Warning: (vsim-8630) Infinity results from division operation.
-#    Time: 0 ns  Iteration: 1  Instance: /Segway_Static_tests File: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv Line: 105
-# [100090] ---- Startup test ----
-# [140090] Startup test passed
-# [140090] ---- Step on test ----
-# [2655170] StepOn_G: UART byte 0x47 sent
-# [2845190] StepOn: rider engaged and system powered
-# [2845190] Step on test passed
-# [2845190] ---- Rider off test ----
-# [3087930] Rider off test passed
-# [3087930] ---- Piezo test ----
-# [4621250] Piezo_G: UART byte 0x47 sent
-# [4811270] Piezo: rider engaged and system powered
-# ** Fatal: [Piezo_low_batt] Piezo output did not toggle
-#    Time: 85381630 ns  Scope: Segway_Static_tests.expect_piezo_toggle File: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv Line: 114
-# ** Note: $finish    : /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv(114)
-#    Time: 85381630 ns  Iteration: 1  Instance: /Segway_Static_tests
-# 1
-# Break at /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv line 114
-# Compile of A2D_Intf.sv was successful.
-# Compile of ADC128S_FC.sv was successful.
-# Compile of auth_blk.sv was successful.
-# Compile of balance_cntrl.sv was successful.
-# Compile of inert_intf.sv was successful.
-# Compile of inertial_integrator.sv was successful.
-# Compile of mtr_drv.sv was successful.
-# Compile of PB_release.sv was successful.
-# Compile of PID.sv was successful.
-# Compile of piezo_drv.sv was successful.
-# Compile of PWM11.sv was successful.
-# Compile of rst_synch.sv was successful.
-# Compile of Segway.sv was successful.
-# Compile of Segway_Static_tests.sv was successful.
-# Compile of SegwayMath.sv was successful.
-# Compile of SegwayModel.sv was successful with warnings.
-# Compile of SPI_ADC128S.sv was successful.
-# Compile of SPI_mnrch.sv was successful.
-# Compile of steer_en.sv was successful.
-# Compile of steer_en_SM.sv was successful.
-# Compile of UART_RX.sv was successful.
-# Compile of UART_TX.sv was successful.
-# 22 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
-# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/A2D_Intf.sv(81): (vopt-2241) Connection width does not match width of port 'rd_data'. The port definition is at: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SPI_mnrch.sv(10).
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv(75): (vopt-2685) [TFMPC] - Too few port connections for 'iDRV'.  Expected 11, found 10.
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv(75): (vopt-2718) [TFMPC] - Missing connection for port 'OVR_I_shtdwn'.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=3.
-# Loading sv_std.std
-# Loading work.Segway_Static_tests(fast)
-run -all
-# ** Warning: (vsim-8630) Infinity results from division operation.
-#    Time: 0 ns  Iteration: 1  Instance: /Segway_Static_tests File: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv Line: 105
-# [100090] ---- Startup test ----
-# ** Note: $stop    : /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv(146)
-#    Time: 140090 ns  Iteration: 1  Instance: /Segway_Static_tests
-# Break at /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv line 146
-restart
-# Compile of piezo_drv.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
-# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/A2D_Intf.sv(81): (vopt-2241) Connection width does not match width of port 'rd_data'. The port definition is at: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SPI_mnrch.sv(10).
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv(75): (vopt-2685) [TFMPC] - Too few port connections for 'iDRV'.  Expected 11, found 10.
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv(75): (vopt-2718) [TFMPC] - Missing connection for port 'OVR_I_shtdwn'.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=3.
-# Loading sv_std.std
-# Loading work.Segway_Static_tests(fast)
-run -all
-# ** Warning: (vsim-8630) Infinity results from division operation.
-#    Time: 0 ns  Iteration: 1  Instance: /Segway_Static_tests File: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv Line: 110
-# [100090] ---- Startup test ----
-# ** Note: $stop    : /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv(146)
-#    Time: 140090 ns  Iteration: 1  Instance: /Segway_Static_tests
-# Break at /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv line 146
-# Compile of Segway_Static_tests.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
-# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/A2D_Intf.sv(81): (vopt-2241) Connection width does not match width of port 'rd_data'. The port definition is at: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SPI_mnrch.sv(10).
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv(75): (vopt-2685) [TFMPC] - Too few port connections for 'iDRV'.  Expected 11, found 10.
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv(75): (vopt-2718) [TFMPC] - Missing connection for port 'OVR_I_shtdwn'.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=3.
-# Loading sv_std.std
-# Loading work.Segway_Static_tests(fast)
-run -all
-# ** Warning: (vsim-8630) Infinity results from division operation.
-#    Time: 0 ns  Iteration: 1  Instance: /Segway_Static_tests File: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv Line: 110
-# [100090] ---- Startup test ----
-# [140090] Startup test passed
-# [140090] ---- Step on test ----
-# [2655170] StepOn_G: UART byte 0x47 sent
-# [2845190] StepOn: rider engaged and system powered
-# [2845190] Step on test passed
-# [2845190] ---- Rider off test ----
-# [3087930] Rider off test passed
-# [3087930] ---- Piezo test ----
-# [4621250] Piezo_G: UART byte 0x47 sent
-# [4811270] Piezo: rider engaged and system powered
-# [Piezo_low_batt] Piezo state mismatch: expected 1, got 0
-# ** Note: $stop    : /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv(113)
-#    Time: 5381630 ns  Iteration: 1  Instance: /Segway_Static_tests
-# Break at /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv line 113
-# Compile of Segway_Static_tests.sv failed with 1 errors.
-# Compile of tests_package.sv failed with 20 errors.
-# 2 compiles, 2 failed with 21 errors.
-# Compile of Segway_Static_tests.sv failed with 1 errors.
-# Compile of tests_package.sv failed with 14 errors.
-# 2 compiles, 2 failed with 15 errors.
-# Compile of A2D_Intf.sv was successful.
-# Compile of ADC128S_FC.sv was successful.
-# Compile of auth_blk.sv was successful.
-# Compile of balance_cntrl.sv was successful.
-# Compile of inert_intf.sv was successful.
-# Compile of inertial_integrator.sv was successful.
-# Compile of mtr_drv.sv was successful.
-# Compile of PB_release.sv was successful.
-# Compile of PID.sv was successful.
-# Compile of piezo_drv.sv was successful.
-# Compile of PWM11.sv was successful.
-# Compile of rst_synch.sv was successful.
-# Compile of Segway.sv was successful.
-# Compile of Segway_Static_tests.sv failed with 1 errors.
-# Compile of SegwayMath.sv was successful.
-# Compile of SegwayModel.sv was successful with warnings.
-# Compile of SPI_ADC128S.sv was successful.
-# Compile of SPI_mnrch.sv was successful.
-# Compile of steer_en.sv was successful.
-# Compile of steer_en_SM.sv was successful.
-# Compile of UART_RX.sv was successful.
-# Compile of UART_TX.sv was successful.
-# Compile of tests_package.sv failed with 14 errors.
-# 23 compiles, 2 failed with 15 errors.
-# Compile of Segway_Static_tests.sv failed with 1 errors.
-# Compile of tests_package.sv was successful.
-# 2 compiles, 1 failed with 1 error.
-# Compile of Segway_Static_tests.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
-# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/A2D_Intf.sv(81): (vopt-2241) Connection width does not match width of port 'rd_data'. The port definition is at: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SPI_mnrch.sv(10).
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv(75): (vopt-2685) [TFMPC] - Too few port connections for 'iDRV'.  Expected 11, found 10.
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv(75): (vopt-2718) [TFMPC] - Missing connection for port 'OVR_I_shtdwn'.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=3.
-# Loading sv_std.std
-# Loading work.tests_package(fast)
-# Loading work.Segway_Static_tests(fast)
-run -all
-# ** Warning: (vsim-8630) Infinity results from division operation.
-#    Time: 0 ns  Iteration: 1  Instance: /Segway_Static_tests File: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv Line: 110
-# [100090] ---- Startup test ----
-# [140090] Startup test passed
-# [140090] ---- Step on test ----
-# [2655170] StepOn_G: UART byte 0x47 sent
-# [2845190] StepOn: rider engaged and system powered
-# [2845190] Step on test passed
-# [2845190] ---- Rider off test ----
-# [3087930] Rider off test passed
-# [3087930] ---- Piezo test ----
-# [4621250] Piezo_G: UART byte 0x47 sent
-# [4811270] Piezo: rider engaged and system powered
-# [Piezo_low_batt] Piezo state mismatch: expected 1, got 0
-# ** Note: $stop    : tests_package.sv(82)
-#    Time: 5381630 ns  Iteration: 1  Instance: /Segway_Static_tests
-# Break at tests_package.sv line 82
-# Compile of tests_package.sv failed with 3 errors.
-# Compile of tests_package.sv failed with 1 errors.
-# Compile of tests_package.sv failed with 1 errors.
-# Compile of tests_package.sv failed with 1 errors.
-# Compile of tests_package.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
-# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/A2D_Intf.sv(81): (vopt-2241) Connection width does not match width of port 'rd_data'. The port definition is at: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SPI_mnrch.sv(10).
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv(75): (vopt-2685) [TFMPC] - Too few port connections for 'iDRV'.  Expected 11, found 10.
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv(75): (vopt-2718) [TFMPC] - Missing connection for port 'OVR_I_shtdwn'.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=3.
-# Loading sv_std.std
-# Loading work.tests_package(fast)
-# Loading work.Segway_Static_tests(fast)
-run -all
-# ** Warning: (vsim-8630) Infinity results from division operation.
-#    Time: 0 ns  Iteration: 1  Instance: /Segway_Static_tests File: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv Line: 110
-# [100090] ---- Startup test ----
-# [140090] Startup test passed
-# [140090] ---- Step on test ----
-# [2655170] StepOn_G: UART byte 0x47 sent
-# [2845190] StepOn: rider engaged and system powered
-# [2845190] Step on test passed
-# [2845190] ---- Rider off test ----
-# [3087930] Rider off test passed
-# [3087930] ---- Piezo test ----
-# [4621250] Piezo_G: UART byte 0x47 sent
-# [4811270] Piezo: rider engaged and system powered
-# [Piezo_low_batt] Timeout waiting for 1 piezo toggles (detected 0)
-# ** Note: $stop    : /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/tests_package.sv(98)
-#    Time: 85381630 ns  Iteration: 1  Instance: /Segway_Static_tests
-# Break at /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/tests_package.sv line 98
-# Compile of tests_package.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
-# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/A2D_Intf.sv(81): (vopt-2241) Connection width does not match width of port 'rd_data'. The port definition is at: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SPI_mnrch.sv(10).
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv(75): (vopt-2685) [TFMPC] - Too few port connections for 'iDRV'.  Expected 11, found 10.
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv(75): (vopt-2718) [TFMPC] - Missing connection for port 'OVR_I_shtdwn'.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=3.
-# Loading sv_std.std
-# Loading work.tests_package(fast)
-# Loading work.Segway_Static_tests(fast)
-run -all
-# ** Warning: (vsim-8630) Infinity results from division operation.
-#    Time: 0 ns  Iteration: 1  Instance: /Segway_Static_tests File: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv Line: 110
-# [100090] ---- Startup test ----
-# [140090] Startup test passed
-# [140090] ---- Step on test ----
-# [2655170] StepOn_G: UART byte 0x47 sent
-# [2845190] StepOn: rider engaged and system powered
-# [2845190] Step on test passed
-# [2845190] ---- Rider off test ----
-# [3087930] Rider off test passed
-# [3087930] ---- Piezo test ----
-# [4621250] Piezo_G: UART byte 0x47 sent
-# [4811270] Piezo: rider engaged and system powered
-# [Piezo_low_batt] Piezo state mismatch: expected 1, got 0
-# ** Note: $stop    : /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/tests_package.sv(82)
-#    Time: 5381630 ns  Iteration: 1  Instance: /Segway_Static_tests
-# Break at /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/tests_package.sv line 82
-# Compile of tests_package.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
-# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/A2D_Intf.sv(81): (vopt-2241) Connection width does not match width of port 'rd_data'. The port definition is at: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SPI_mnrch.sv(10).
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv(75): (vopt-2685) [TFMPC] - Too few port connections for 'iDRV'.  Expected 11, found 10.
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv(75): (vopt-2718) [TFMPC] - Missing connection for port 'OVR_I_shtdwn'.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=3.
-# Loading sv_std.std
-# Loading work.tests_package(fast)
-# Loading work.Segway_Static_tests(fast)
-run -all
-# ** Warning: (vsim-8630) Infinity results from division operation.
-#    Time: 0 ns  Iteration: 1  Instance: /Segway_Static_tests File: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv Line: 110
-# [100090] ---- Startup test ----
-# [140090] Startup test passed
-# [140090] ---- Step on test ----
-# [2655170] StepOn_G: UART byte 0x47 sent
-# [2845190] StepOn: rider engaged and system powered
-# [2845190] Step on test passed
-# [2845190] ---- Rider off test ----
-# [3087930] Rider off test passed
-# [3087930] ---- Piezo test ----
-# [4621250] Piezo_G: UART byte 0x47 sent
-# [4811270] Piezo: rider engaged and system powered
-# Compile of Segway.sv was successful.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
-# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/A2D_Intf.sv(81): (vopt-2241) Connection width does not match width of port 'rd_data'. The port definition is at: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SPI_mnrch.sv(10).
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv(75): (vopt-2685) [TFMPC] - Too few port connections for 'iDRV'.  Expected 11, found 10.
-# ** Warning: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv(75): (vopt-2718) [TFMPC] - Missing connection for port 'OVR_I_shtdwn'.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=3.
-# Loading sv_std.std
-# Loading work.tests_package(fast)
-# Loading work.Segway_Static_tests(fast)
-run -all
-# ** Warning: (vsim-8630) Infinity results from division operation.
-#    Time: 0 ns  Iteration: 1  Instance: /Segway_Static_tests File: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv Line: 110
-# [100090] ---- Startup test ----
-# [140090] Startup test passed
-# [140090] ---- Step on test ----
-# ** Warning: (vsim-8630) Infinity results from division operation.
-#    Time: 1101310 ns  Iteration: 3  Instance: /Segway_Static_tests File: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv Line: 110
-# ** Warning: (vsim-8630) Infinity results from division operation.
-#    Time: 1833750 ns  Iteration: 3  Instance: /Segway_Static_tests File: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv Line: 110
-# [2655170] StepOn_G: UART byte 0x47 sent
-# [2655210] StepOn: rider engaged and system powered
-# [2655210] Step on test passed
-# [2655210] ---- Rider off test ----
-# [3087930] Rider off test passed
-# [3087930] ---- Piezo test ----
-# [4621250] Piezo_G: UART byte 0x47 sent
-# [4621290] Piezo: rider engaged and system powered
-# [5127230] Piezo_low_batt_active: piezo toggled
-# ** Warning: (vsim-8630) Infinity results from division operation.
-#    Time: 5659810 ns  Iteration: 3  Instance: /Segway_Static_tests File: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv Line: 110
-# ** Warning: (vsim-8630) Infinity results from division operation.
-#    Time: 6228390 ns  Iteration: 3  Instance: /Segway_Static_tests File: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv Line: 110
-# [6428410] Piezo_recover_idle: piezo idle
-# ** Warning: (vsim-8630) Infinity results from division operation.
-#    Time: 6960830 ns  Iteration: 3  Instance: /Segway_Static_tests File: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv Line: 110
-# [7160850] Piezo_recover_idle2: piezo idle
-# [7160850] Piezo test passed
-# [7160850] ---- Disconnection test ----
-# ** Warning: (vsim-8630) Infinity results from division operation.
-#    Time: 7693270 ns  Iteration: 3  Instance: /Segway_Static_tests File: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv Line: 110
-# [8202730] Disconnect_S: UART byte 0x53 sent
-# ** Warning: (vsim-8630) Infinity results from division operation.
-#    Time: 8425710 ns  Iteration: 3  Instance: /Segway_Static_tests File: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv Line: 110
-# ** Warning: (vsim-8630) Infinity results from division operation.
-#    Time: 9158150 ns  Iteration: 3  Instance: /Segway_Static_tests File: /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv Line: 110
-# [9641530] Disconnection test passed
-# [9641530] All Segway static tests completed successfully
-# ** Note: $stop    : /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv(102)
-#    Time: 9641530 ns  Iteration: 1  Instance: /Segway_Static_tests
-# Break at /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv line 102
+# End time: 11:57:25 on Dec 03,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 1

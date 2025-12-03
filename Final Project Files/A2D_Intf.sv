@@ -64,6 +64,7 @@ logic steer_pot_en;
 logic batt_en;
 logic txn_done;
 logic update_chnl;
+logic [15:0] spi_data;
 logic [11:0] data_out;
 
 // State machine states
@@ -87,9 +88,11 @@ SPI_mnrch spi_inst (
     .MISO(MISO),
     .SCLK(SCLK),
     .SS_n(SS_n),
-    .rd_data(data_out),
+    .rd_data(spi_data),
     .done(txn_done)
 );
+
+assign data_out = spi_data[11:0];
 
 
 

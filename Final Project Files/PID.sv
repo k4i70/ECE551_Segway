@@ -106,7 +106,7 @@ module PID(
                     ss_counter <= 27'd0;
                 end else if (!pwr_up) begin
                     ss_counter <= 27'd0; // Hold at zero when not powered up
-                end else if (ss_counter != 27'h7FFFFFF) begin
+                end else if (ss_counter <= 27'h7FFF000) begin
                     ss_counter <= ss_counter + 27'd256; // <<<< increment by 256 for fast_sim
                 end
             end
@@ -117,7 +117,7 @@ module PID(
                     ss_counter <= 27'd0;
                 end else if (!pwr_up) begin
                     ss_counter <= 27'd0; // Hold at zero when not powered up
-                end else if (ss_counter != 27'h7FFFFFF) begin
+                end else if (ss_counter <= 27'h7FFFFF0) begin
                     ss_counter <= ss_counter + 27'd1;
                 end
             end

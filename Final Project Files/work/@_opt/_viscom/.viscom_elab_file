@@ -1,1 +1,1 @@
-/cae/apps/data/mentor-2024/questasim/linux/VisualizerRls/bin/viscom -nolock -quiet -jmem_size 590016 work.Segway_Static_tests(fast) -quiet -auto_acc_if_foreign -work work -allow_unnamed -o _opt -id 9-000ae431a4f1-69253e8a-1120b-b0bef
+/cae/apps/data/mentor-2024/questasim/linux/VisualizerRls/bin/viscom -nolock -quiet -jmem_size 590016 work.Segway_tb_moving_tests -quiet -auto_acc_if_foreign -work work +acc -allow_unnamed -o _opt -id 1-000ae431a4f1-69306f51-4ee78-1d2ab7 +__betafsm
