@@ -5,22 +5,14 @@ read_file -format sverilog { ./A2D_Intf.sv ./ADC128S_FC.sv ./auth_blk.sv ./balan
 set current_design Segway
 
 #create clk signal
-create_clock -name "clk" -period 3 -waveform {0 1} {clk}
+create_clock -name "clk" -period 3 {clk}
+set_clock_uncertainty 0.15 clk
 
 #dont buffer the clock
 set_dont_touch_network [find port clk]
 
 #setting primary inputs
 set prim_inputs [remove_from_collection [all_inputs] [find port clk]]
-
-#setting register paths
-set_multicycle_path 2 -setup -from [find pin iNEMO/ptch_*_reg*/CLK]
-set_multicycle_path 2 -setup -from [find pin iNEMO/AZ*_reg*/CLK]
-set_multicycle_path 2 -hold -from [find pin iNEMO/ptch_*_reg*/CLK]
-set_multicycle_path 2 -hold -from [find pin iNEMO/AZ*_reg*/CLK]
-
-set_multicycle_path 2 -setup -from [find pin iBAL/iCNTRL/ss_tmr_reg*/CLK]
-set_multicycle_path 2 -hold -from [find pin iBAL/iCNTRL/ss_tmr_reg*/CLK]
 
 #setting input delay for clock
 set_input_delay -clock clk 0.25 $prim_inputs
@@ -38,15 +30,62 @@ set_output_delay -clock clk 0.35 [all_outputs]
 set_load 0.05 [all_outputs]
 
 #parasitic caps
+#set_wire_load_mode top
 set_wire_load_model -name 16000 -library saed32rvt_tt0p85v25c
 
 #node transition time
 set_max_transition 0.1 [current_design]
 
-
-set_clock_uncertainty 0.15 clk
-set_fix_hold clk
+#first compile
 compile -map_effort medium
+
+#setting register paths
+set_multicycle_path 2 -setup -from [find pin iNEMO/ptch_*_reg*/CLK]
+set_multicycle_path 2 -setup -from [find pin iNEMO/AZ*_reg*/CLK]
+set_multicycle_path 1 -hold -from [find pin iNEMO/ptch_*_reg*/CLK]
+set_multicycle_path 1 -hold -from [find pin iNEMO/AZ*_reg*/CLK]
+
+set_multicycle_path 2 -setup -from [find pin iBAL/iCNTRL/ss_tmr_reg*/CLK]
+set_multicycle_path 1 -hold -from [find pin iBAL/iCNTRL/ss_tmr_reg*/CLK]
+
+set_multicycle_path 2 -setup -from [find pin iNEMO/iINT/*/CLK] -to [find pin iBAL/iPID/*/D]
+set_multicycle_path 1 -hold -from [find pin iNEMO/iINT/*/CLK] -to [find pin iBAL/iPID/*/D]
+
+set_multicycle_path 2 -setup -to [find pin iBAL/iSEGWAY/mult_*/FS_*/D]
+set_multicycle_path 1 -hold -to [find pin iBAL/iSEGWAY/mult_*/FS_*/D]
+
+set_multicycle_path 2 -setup -from [find pin iBAL/iPID/add_*/S] -to [find pin iBAL/iSEGWAY/mult_*/D]
+set_multicycle_path 1 -hold -from [find pin iBAL/iPID/add_*/S] -to [find pin iBAL/iSEGWAY/mult_*/D]
+
+set_multicycle_path 2 -setup -from [find pin */clk_r_REG*_S*/CLK] -to [find pin iBAL/iPID/integrator_reg*/D]
+set_multicycle_path 1 -hold -from [find pin */clk_r_REG*_S*/CLK] -to [find pin iBAL/iPID/integrator_reg*/D]
+
+#set_multicycle_path 2 -setup -from [find pin iBAL/iSEGWAY/mult_*/CLK]
+#set_multicycle_path 1 -hold -from [find pin iBAL/iSEGWAY/mult_*/CLK]
+
+set_boundary_optimization true
+set_optimize_registers true
+set_critical_range 0.25 [current_design]
+set_max_fanout 3 [current_design]
+
+#set_prefer saed32rvt_tt0p85v25c/INVX2_RVT
+#set_dont_use saed32rvt_tt0p85v25c/INVX0_RVT
+#set_dont_use saed32rvt_tt0p85v25c/NAND2X0_RVT
+
+ungroup -all -flatten
+
+#second compile
+set_fix_hold clk
+compile -map_effort high
+
+# Enable aggressive timing optimization
+set_app_var compile_timing_high_effort true
+set_app_var compile_timing_critical_range true
+
+# Multiple incremental high-effort compiles
+compile -incremental_mapping -map_effort high
+compile -incremental_mapping -map_effort high
+compile -incremental_mapping -map_effort high
 
 ungroup -all -flatten
 
@@ -59,4 +98,4 @@ report_area
 report_area > area.rpt
 
 #write out resulting synthesized netlist
-write -format sverilog commMod -output Segway.vg
+write -format sverilog -hierarchy -output Segway.vg
