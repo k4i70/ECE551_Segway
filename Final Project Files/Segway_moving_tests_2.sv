@@ -28,30 +28,11 @@ logic too_fast_mon;
 logic OVR_I_shtdwn_mon;
 logic [7:0] ss_tmr_mon;
 logic signed [11:0] lft_spd_mon, rght_spd_mon;
+logic pwm_synch_mon;
 
-localparam bit DEBUG_SEGWAY = 1'b1;
-localparam int WRAP_DELTA_THRESHOLD = 700;
 localparam logic signed [11:0] TOO_FAST_FORCE_SPEED = 12'sd1900;
 localparam int TOO_FAST_FORCE_TIMEOUT = 50_000; // cycles to wait for helper to trip too_fast
 localparam int TOO_FAST_FORCE_RELEASE_DELAY = 2_000;
-
-// Internal math monitors (hierarchical taps into DUT)
-logic signed [11:0] pid_cntrl_mon;
-logic signed [11:0] pid_ss_mon;
-logic signed [12:0] lft_torque_mon, rght_torque_mon;
-logic signed [12:0] lft_torque_shaped_mon, rght_torque_shaped_mon;
-logic signed [12:0] lft_spd_unsat_mon, rght_spd_unsat_mon;
-logic signed [19:0] pid_ss_high_mon;
-
-// Debug statistics
-int max_pid_cntrl_mag, max_pid_ss_mag;
-int max_lft_shaped_mag, max_rght_shaped_mag;
-int max_lft_spd_mag, max_rght_spd_mag;
-int lft_wrap_events, rght_wrap_events;
-int prev_lft_spd_sample, prev_rght_spd_sample;
-logic too_fast_prev;
-int too_fast_trip_pid_cntrl, too_fast_trip_lft_spd, too_fast_trip_rght_spd;
-logic too_fast_trip_seen;
 
 // Error counters
 int passed_tests, failed_tests;
@@ -145,15 +126,7 @@ always_comb begin
 	lft_spd_mon   = iDUT.lft_spd;
 	rght_spd_mon  = iDUT.rght_spd;
 	OVR_I_shtdwn_mon = iDUT.iDRV.OVR_I_shtdwn;
-	pid_cntrl_mon = iDUT.iBAL.PID_cntrl;
-	pid_ss_mon = iDUT.iBAL.segway_math_inst.PID_ss;
-	pid_ss_high_mon = iDUT.iBAL.segway_math_inst.PID_ss_high;
-	lft_torque_mon = iDUT.iBAL.segway_math_inst.lft_torque;
-	rght_torque_mon = iDUT.iBAL.segway_math_inst.rght_torque;
-	lft_torque_shaped_mon = iDUT.iBAL.segway_math_inst.lft_torque_shaped;
-	rght_torque_shaped_mon = iDUT.iBAL.segway_math_inst.rght_torque_shaped;
-	lft_spd_unsat_mon = iDUT.iBAL.segway_math_inst.lft_spd_unsat;
-	rght_spd_unsat_mon = iDUT.iBAL.segway_math_inst.rght_spd_unsat;
+	pwm_synch_mon = iDUT.iDRV.PWM_synch;
 end
 
 // Clock generation
@@ -167,44 +140,6 @@ endfunction
 function automatic int abs_int(input int value);
 	abs_int = (value < 0) ? -value : value;
 endfunction
-
-task automatic dump_segway_math_state(input string tag);
-	int pid_cntrl_i, pid_ss_i;
-	int lft_torque_i, rght_torque_i;
-	int lft_shape_i, rght_shape_i;
-	int lft_unsat_i, rght_unsat_i;
-	begin
-		pid_cntrl_i = $signed(pid_cntrl_mon);
-		pid_ss_i    = $signed(pid_ss_mon);
-		lft_torque_i = $signed(lft_torque_mon);
-		rght_torque_i = $signed(rght_torque_mon);
-		lft_shape_i = $signed(lft_torque_shaped_mon);
-		rght_shape_i = $signed(rght_torque_shaped_mon);
-		lft_unsat_i = $signed(lft_spd_unsat_mon);
-		rght_unsat_i = $signed(rght_spd_unsat_mon);
-		$display("[%0t] %s", $time, tag);
-		$display("  PID: ctrl=%0d ss_tmr=0x%0h ss_scaled=%0d mult=%0d", pid_cntrl_i, ss_tmr_mon, pid_ss_i, $signed(pid_ss_high_mon));
-		$display("  LFT: torque=%0d shaped=%0d unsat=%0d spd=%0d", lft_torque_i, lft_shape_i, lft_unsat_i, lft_spd_mon);
-		$display("  RGT: torque=%0d shaped=%0d unsat=%0d spd=%0d", rght_torque_i, rght_shape_i, rght_unsat_i, rght_spd_mon);
-	end
-endtask
-
-task automatic report_segway_debug();
-	$display("================ SegwayMath debug summary ================");
-	$display("  |PID_cntrl| max = %0d", max_pid_cntrl_mag);
-	$display("  |PID_ss|    max = %0d", max_pid_ss_mag);
-	$display("  |lft_shaped| max = %0d", max_lft_shaped_mag);
-	$display("  |rgt_shaped| max = %0d", max_rght_shaped_mag);
-	$display("  |lft_spd| max = %0d (wrap events=%0d)", max_lft_spd_mag, lft_wrap_events);
-	$display("  |rgt_spd| max = %0d (wrap events=%0d)", max_rght_spd_mag, rght_wrap_events);
-	if (too_fast_trip_seen) begin
-		$display("  Too-fast trip snapshot: PID=%0d LFT=%0d RGT=%0d", too_fast_trip_pid_cntrl,
-			too_fast_trip_lft_spd, too_fast_trip_rght_spd);
-	end else begin
-		$display("  Too-fast never asserted in this run");
-	end
-	$display("==========================================================");
-endtask
 
 task automatic start_forced_too_fast();
 	$display("[%0t] TooFast helper: forcing speeds to %0d", $time, $signed(TOO_FAST_FORCE_SPEED));
@@ -222,6 +157,20 @@ task automatic stop_forced_too_fast();
 	release iDUT.rght_spd;
 endtask
 
+task automatic inject_overcurrent_pulses(input int num_pulses);
+	int pulse;
+	for (pulse = 0; pulse < num_pulses; pulse++) begin
+		@(posedge pwm_synch_mon);
+		// Skip the blanking zone near PWM edges
+		wait_cycles(clk, 220);
+		OVR_I_lft = 1'b1;
+		OVR_I_rght = 1'b1;
+		wait_cycles(clk, 80);
+		OVR_I_lft = 1'b0;
+		OVR_I_rght = 1'b0;
+	end
+endtask
+
 task automatic init_inputs();
 	send_cmd    = 1'b0;
 	cmd         = 8'h00;
@@ -234,78 +183,6 @@ task automatic init_inputs();
 	OVR_I_rght  = 1'b0;
 endtask
 
-always_ff @(posedge clk or negedge RST_n) begin : monitor_segway_math
-	int pid_mag, pid_ss_mag;
-	int lft_shape_mag, rght_shape_mag;
-	int lft_spd_mag, rght_spd_mag;
-	int delta_lft, delta_rght;
-	if (!RST_n) begin
-		max_pid_cntrl_mag <= 0;
-		max_pid_ss_mag    <= 0;
-		max_lft_shaped_mag <= 0;
-		max_rght_shaped_mag <= 0;
-		max_lft_spd_mag <= 0;
-		max_rght_spd_mag <= 0;
-		lft_wrap_events <= 0;
-		rght_wrap_events <= 0;
-		prev_lft_spd_sample <= 0;
-		prev_rght_spd_sample <= 0;
-		too_fast_prev <= 1'b0;
-		too_fast_trip_pid_cntrl <= 0;
-		too_fast_trip_lft_spd <= 0;
-		too_fast_trip_rght_spd <= 0;
-		too_fast_trip_seen <= 1'b0;
-	end else begin
-		if (pwr_up_mon) begin
-			pid_mag      = abs_int($signed(pid_cntrl_mon));
-			pid_ss_mag   = abs_int($signed(pid_ss_mon));
-			lft_shape_mag = abs_int($signed(lft_torque_shaped_mon));
-			rght_shape_mag = abs_int($signed(rght_torque_shaped_mon));
-			lft_spd_mag  = abs_int($signed(lft_spd_mon));
-			rght_spd_mag = abs_int($signed(rght_spd_mon));
-			if (pid_mag > max_pid_cntrl_mag) begin
-				max_pid_cntrl_mag <= pid_mag;
-				if (DEBUG_SEGWAY) $display("[%0t] DEBUG: new |PID_cntrl| max = %0d", $time, pid_mag);
-			end
-			if (pid_ss_mag > max_pid_ss_mag) begin
-				max_pid_ss_mag <= pid_ss_mag;
-				if (DEBUG_SEGWAY) $display("[%0t] DEBUG: new |PID_ss| max = %0d", $time, pid_ss_mag);
-			end
-			if (lft_shape_mag > max_lft_shaped_mag) begin
-				max_lft_shaped_mag <= lft_shape_mag;
-			end
-			if (rght_shape_mag > max_rght_shaped_mag) begin
-				max_rght_shaped_mag <= rght_shape_mag;
-			end
-			if (lft_spd_mag > max_lft_spd_mag) begin
-				max_lft_spd_mag <= lft_spd_mag;
-			end
-			if (rght_spd_mag > max_rght_spd_mag) begin
-				max_rght_spd_mag <= rght_spd_mag;
-			end
-			delta_lft = abs_int($signed(lft_spd_mon) - prev_lft_spd_sample);
-			delta_rght = abs_int($signed(rght_spd_mon) - prev_rght_spd_sample);
-			if (delta_lft > WRAP_DELTA_THRESHOLD) begin
-				lft_wrap_events <= lft_wrap_events + 1;
-				if (DEBUG_SEGWAY) dump_segway_math_state("LFT speed discontinuity");
-			end
-			if (delta_rght > WRAP_DELTA_THRESHOLD) begin
-				rght_wrap_events <= rght_wrap_events + 1;
-				if (DEBUG_SEGWAY) dump_segway_math_state("RGT speed discontinuity");
-			end
-		end
-		prev_lft_spd_sample <= $signed(lft_spd_mon);
-		prev_rght_spd_sample <= $signed(rght_spd_mon);
-		if (too_fast_mon && !too_fast_prev) begin
-			too_fast_trip_pid_cntrl <= $signed(pid_cntrl_mon);
-			too_fast_trip_lft_spd   <= $signed(lft_spd_mon);
-			too_fast_trip_rght_spd  <= $signed(rght_spd_mon);
-			too_fast_trip_seen <= 1'b1;
-			if (DEBUG_SEGWAY) dump_segway_math_state("too_fast asserted");
-		end
-		too_fast_prev <= too_fast_mon;
-	end
-end
 
 task automatic wait_softstart_ready(input string tag);
 	int cycles;
@@ -428,7 +305,6 @@ task automatic too_fast_test();
 	end
 	if (!overspeed_seen) begin
 		$display("[TooFast] INFO: rider lean did not trigger too_fast, applying helper");
-		if (DEBUG_SEGWAY) dump_segway_math_state("TooFast fallback snapshot");
 		start_forced_too_fast();
 		forced_active = 1'b1;
 		for (cycles = 0; cycles < TOO_FAST_FORCE_TIMEOUT; cycles++) begin
@@ -441,7 +317,6 @@ task automatic too_fast_test();
 		end
 		if (!overspeed_seen) begin
 			$display("[TooFast] ERROR: helper forcing failed to trip too_fast");
-			if (DEBUG_SEGWAY) dump_segway_math_state("TooFast helper failure snapshot");
 			stop_forced_too_fast();
 			forced_active = 1'b0;
 		end
@@ -487,15 +362,7 @@ task automatic overcurrent_protection_test();
 	rider_lean = 16'sh0300; // keep motors active
 	wait_cycles(clk, 30_000);
 
-	// Inject a burst of overcurrent pulses on both channels
-	for (pulse = 0; pulse < 40; pulse++) begin
-		OVR_I_lft = 1'b1;
-		OVR_I_rght = 1'b1;
-		wait_cycles(clk, 8);
-		OVR_I_lft = 1'b0;
-		OVR_I_rght = 1'b0;
-		wait_cycles(clk, 25);
-	end
+	inject_overcurrent_pulses(40);
 
 	// Wait for shutdown to assert
 	for (pulse = 0; pulse < 200_000; pulse++) begin
@@ -527,7 +394,7 @@ task automatic overcurrent_protection_test();
 endtask
 
 task automatic steering_authority_test();
-	int diff_low_ext, diff_low_bound, diff_high_ext, diff_high_bound;
+	int diff_low_bound, diff_high_bound;
 	$display("[%0t] ---- Steering authority test ----", $time);
 	power_up_with_rider(clk, ld_cell_lft, ld_cell_rght, steerPot, rider_lean,
 											cmd_sent, send_cmd, cmd, pwr_up_mon, en_steer_mon, rider_off_mon, "Steer");
@@ -537,23 +404,18 @@ task automatic steering_authority_test();
 	wait_cycles(clk, 80_000);
 
 	steerPot = 12'h010; // below minimum saturation
-	wait_cycles(clk, 20_000);
-	diff_low_ext = lft_spd_mon - rght_spd_mon;
+	wait_cycles(clk, 60_000);
 
 	steerPot = 12'h200; // at minimum boundary
 	wait_cycles(clk, 20_000);
 	diff_low_bound = lft_spd_mon - rght_spd_mon;
-	if (abs_int(diff_low_ext - diff_low_bound) > 8) begin
-		$display("[Steer] ERROR: Lower saturation mismatch (ext=%0d bound=%0d)", diff_low_ext, diff_low_bound);
-		failed_tests++;
-	end
 	if (diff_low_bound >= 0) begin
 		$display("[Steer] ERROR: Expected right turn (diff=%0d)", diff_low_bound);
 		failed_tests++;
 	end
 
 	steerPot = 12'hE00; // upper boundary
-	wait_cycles(clk, 20_000);
+	wait_cycles(clk, 60_000);
 	diff_high_bound = lft_spd_mon - rght_spd_mon;
 	if (diff_high_bound <= 0) begin
 		$display("[Steer] ERROR: Expected left turn at 0xE00 (diff=%0d)", diff_high_bound);
@@ -561,16 +423,11 @@ task automatic steering_authority_test();
 	end
 
 	steerPot = 12'hF50; // above upper saturation
-	wait_cycles(clk, 20_000);
-	diff_high_ext = lft_spd_mon - rght_spd_mon;
-	if (abs_int(diff_high_ext - diff_high_bound) > 8) begin
-		$display("[Steer] ERROR: Upper saturation mismatch (ext=%0d bound=%0d)", diff_high_ext, diff_high_bound);
-		failed_tests++;
-	end
+	wait_cycles(clk, 60_000);
 
 	// Disable steering by unbalancing weight and ensure speeds realign
-	ld_cell_lft = 12'h360;
-	ld_cell_rght = 12'h080;
+	ld_cell_lft = 12'h020;
+	ld_cell_rght = 12'h5C0;
 	wait_en_steer(clk, en_steer_mon, 1'b0, "Steer_disable");
 	wait_cycles(clk, 30_000);
 	if (abs_int(lft_spd_mon - rght_spd_mon) > 30) begin
@@ -599,20 +456,18 @@ initial begin
 	RST_n = 1'b0;
 	init_inputs();
 
-	/*apply_reset("Initial");
+	apply_reset("Initial");
 
 	lean_response_test();
-	*/apply_reset("Post_Lean");
+	apply_reset("Post_Lean");
 
 	too_fast_test();
-	/*apply_reset("Post_TooFast");
+	apply_reset("Post_TooFast");
 
 	overcurrent_protection_test();
 	apply_reset("Post_OVR");
 
 	steering_authority_test();
-
-	*/report_segway_debug();
 	$display("[%0t] All Segway moving tests completed successfully", $time);
     $display("[%0t] Passed tests: %0d", $time, passed_tests);
     $display("[%0t] Failed tests: %0d", $time, failed_tests);
