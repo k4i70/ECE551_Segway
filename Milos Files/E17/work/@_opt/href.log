@@ -1,3 +1,0 @@
-BEGIN 1:SegwayMath:fast:work
-    ss_tmr :  1:balance_cntrl_chk_tb:fast:work
-END 

@@ -1,9 +1,0 @@
-BEGIN 1:PID:fast:work
-    P_term :  1:debug_test12:fast:work
-    PID_sum :  1:debug_test12:fast:work
-    I_term :  1:debug_test12:fast:work
-    ptch_saturated :  1:debug_test12:fast:work
-    ov :  1:debug_test12:fast:work
-    integrator :  1:debug_test12:fast:work
-    D_term :  1:debug_test12:fast:work
-END 

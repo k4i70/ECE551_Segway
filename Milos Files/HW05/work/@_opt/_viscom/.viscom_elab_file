@@ -1,1 +1,0 @@
-/cae/apps/data/mentor-2024/questasim/linux/VisualizerRls/bin/viscom -nolock -quiet -jmem_size 1572864 work.balance_cntrl_chk_tb -quiet -auto_acc_if_foreign -work work -L /filespace/m/makeyes2/ECE551/SAED32_lib_RVT +acc -allow_unnamed -o _opt -id 1-000ae431a4f1-691a5b00-bb1f9-1063e0 +__betafsm

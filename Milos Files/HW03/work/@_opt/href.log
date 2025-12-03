@@ -1,3 +1,0 @@
-BEGIN 1:steer_en_SM:fast:work
-    state :  1:steer_en_SM_tb:fast:work
-END 

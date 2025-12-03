@@ -1,1 +1,0 @@
-C:/intelFPGA_lite/24.1std/questa_fse/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 393216 work.UART_rx_tb(fast) -quiet -auto_acc_if_foreign -work work +acc -allow_unnamed -o _opt -id 4-4cd71794cb63-68e924a4-2f9-5774 +__betafsm
