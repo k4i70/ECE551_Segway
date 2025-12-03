@@ -1,122 +1,124 @@
 m255
 K4
 z2
-!s12c _opt2
-Z0 !s99 nomlopt
-Z1 !s12c _opt1
+Z0 !s12c _opt2
+Z1 !s99 nomlopt
 R0
 R1
-R0
+Z2 !s12c _opt1
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
+R1
+R2
+R1
 !s11f MIXED_VERSIONS
-Z2 !s12c _opt
-R0
-R2
-R0
-R2
-R0
-R2
-R0
-R2
-R0
-R2
-R0
-R2
-R0
-R2
-R0
-R2
-R0
+Z3 !s12c _opt
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R3
+R1
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-Z3 dC:/Windows/system32
+Z4 dC:/Windows/system32
 T_opt
 !s110 1764048522
 Vfk8Bmzo[EDI9PYJ7j2PV;1
-Z4 04 19 4 work Segway_Static_tests fast 0
+Z5 04 19 4 work Segway_Static_tests fast 0
 =9-000ae431a4f1-69253e8a-1120b-b0bef
-R0
-Z5 !s12f OEM100
-Z6 !s12b OEM100
-Z7 !s124 OEM100
-Z8 !s135 nogc
-Z9 o-quiet -auto_acc_if_foreign -work work
-Z10 tCvgOpt 0
+R1
+Z6 !s12f OEM100
+Z7 !s12b OEM100
+Z8 !s124 OEM100
+Z9 !s135 nogc
+Z10 o-quiet -auto_acc_if_foreign -work work
+Z11 tCvgOpt 0
 n@_opt
-Z11 OE;O;2024.3_2;79
-R3
+Z12 OE;O;2024.3_2;79
+R4
 T_opt1
 !s110 1764608401
 VA:cid:P3kd[BfXzW^f^TP2
-R4
-=1-4cd71793475b-692dc98f-1c6-3c0c
-R0
 R5
+=1-4cd71793475b-692dc98f-1c6-3c0c
+R1
 R6
+R7
 !s124 OEM10U24 
-R8
 R9
 R10
+R11
 n@_opt1
 OL;O;2024.3;79
-R3
-T_opt2
-!s110 1764781220
-VzC1gIO>LG>jiN@]6NPEMC1
 R4
-=1-000ae431a4f1-69306c9e-aca95-1d019d
-R0
+T_opt2
+!s110 1764781767
+V5H0X_oh<DUa5PIUzMa6Da0
 R5
+=2-000ae431a4f1-69306ec6-eccc1-1d019d
+R1
 R6
 R7
 R8
+R9
 o-quiet -auto_acc_if_foreign -work work +acc
-R10
-n@_opt2
 R11
+n@_opt2
+R12
 vA2D_intf
-Z12 2tests_package.sv|Segway_Static_tests.sv|Segway.sv|auth_blk.sv|balance_cntrl.sv|steer_en.sv|steer_en_SM.sv|mtr_drv.sv|piezo_drv.sv|A2D_Intf.sv|inert_intf.sv|inertial_integrator.sv|PID.sv|SegwayMath.sv|PWM11.sv|rst_synch.sv|UART_TX.sv|UART_RX.sv|SPI_mnrch.sv|SPI_ADC128S.sv|ADC128S_FC.sv|SegwayModel.sv
-Z13 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z14 !s110 1764606859
+Z13 2tests_package.sv|Segway_Static_tests.sv|Segway.sv|auth_blk.sv|balance_cntrl.sv|steer_en.sv|steer_en_SM.sv|mtr_drv.sv|piezo_drv.sv|A2D_Intf.sv|inert_intf.sv|inertial_integrator.sv|PID.sv|SegwayMath.sv|PWM11.sv|rst_synch.sv|UART_TX.sv|UART_RX.sv|SPI_mnrch.sv|SPI_ADC128S.sv|ADC128S_FC.sv|SegwayModel.sv
+Z14 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z15 !s110 1764606859
 !i10b 1
 !s100 _Re>MQLol^3S8MOl_l3>B2
 IcFM3cCbKXXDZ:2A9H^1QN2
 S1
-Z15 dI:/ECE 551/ECE551_Segway/Final Project Files
-Z16 w1764605269
+Z16 dI:/ECE 551/ECE551_Segway/Final Project Files
+w1764605269
 8A2D_Intf.sv
 FA2D_Intf.sv
 !i122 140
@@ -131,95 +133,95 @@ Z20 !s107 SegwayModel.sv|ADC128S_FC.sv|SPI_ADC128S.sv|SPI_mnrch.sv|UART_RX.sv|UA
 Z21 !s90 -sv|tests_package.sv|Segway_Static_tests.sv|Segway.sv|auth_blk.sv|balance_cntrl.sv|steer_en.sv|steer_en_SM.sv|mtr_drv.sv|piezo_drv.sv|A2D_Intf.sv|inert_intf.sv|inertial_integrator.sv|PID.sv|SegwayMath.sv|PWM11.sv|rst_synch.sv|UART_TX.sv|UART_RX.sv|SPI_mnrch.sv|SPI_ADC128S.sv|ADC128S_FC.sv|SegwayModel.sv|
 !i113 0
 Z22 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R10
+R11
 n@a2@d_intf
 vADC128S_FC
-R12
-R13
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/ADC128S_FC.sv
 R14
+Z23 !s110 1764781763
 !i10b 1
 !s100 n1UPndo6Ol_azTTf4hd=N2
-IH=ezQDeZUA>oXdmfeDXX?1
+InOGKTnFGh3hS[L?=Dz15S3
 S1
-R15
-R16
-8ADC128S_FC.sv
-FADC128S_FC.sv
-!i122 140
+Z24 d/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files
+Z25 w1764780147
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/ADC128S_FC.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/ADC128S_FC.sv
+!i122 164
 L0 1 114
-R17
-R18
-r1
-!s85 0
-31
-R19
-R20
-R21
-!i113 0
-R22
-R10
-n@a@d@c128@s_@f@c
-vAuth_blk
-R12
-R13
-R14
-!i10b 1
-!s100 ?LHF;[KfA9]MM^YC9Ea<82
-Ic`kbD?`OWRHnl0AANe63Z2
-S1
-R15
-Z23 w1764605270
-8auth_blk.sv
-Fauth_blk.sv
-!i122 140
-Z24 L0 1 80
-R17
-R18
-r1
-!s85 0
-31
-R19
-R20
-R21
-!i113 0
-R22
-R10
-n@auth_blk
-vauth_blk
-2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/auth_blk.sv
-R13
-!s110 1764045426
-!i10b 1
-!s100 EXLhj^ATe0M4n`?QRVm=U0
-Ik?:;HOGfJlEVo_;DV85Nd3
-S1
-Z25 d/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files
-w1764001717
-8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/auth_blk.sv
-F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/auth_blk.sv
-!i122 46
-R24
 R17
 Z26 OE;L;2024.3_2;79
 r1
 !s85 0
 31
-!s108 1764045426.000000
-!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/auth_blk.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/auth_blk.sv|
+Z27 !s108 1764781763.000000
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/ADC128S_FC.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/ADC128S_FC.sv|
 !i113 0
-Z27 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R10
+Z28 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R11
+n@a@d@c128@s_@f@c
+vAuth_blk
+Z29 2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/auth_blk.sv
+R14
+R23
+!i10b 1
+!s100 ?LHF;[KfA9]MM^YC9Ea<82
+ICA3ln`oZILV2J1z?7IiF=0
+S1
+R24
+R25
+Z30 8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/auth_blk.sv
+Z31 F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/auth_blk.sv
+!i122 165
+Z32 L0 1 80
+R17
+R26
+r1
+!s85 0
+31
+R27
+Z33 !s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/auth_blk.sv|
+Z34 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/auth_blk.sv|
+!i113 0
+R28
+R11
+n@auth_blk
+vauth_blk
+R29
+R14
+!s110 1764045426
+!i10b 1
+!s100 EXLhj^ATe0M4n`?QRVm=U0
+Ik?:;HOGfJlEVo_;DV85Nd3
+S1
+R24
+w1764001717
+R30
+R31
+!i122 46
+R32
+R17
+R26
+r1
+!s85 0
+31
+!s108 1764045426.000000
+R33
+R34
+!i113 0
+R28
+R11
 vbalance_cntrl
-R12
 R13
 R14
+R15
 !i10b 1
 !s100 QOXO2:3ejZ>4;f>:Y@Nb81
 IMZI5:?^2T]Fn5A^m>1^?B0
 S1
-R15
-R23
+R16
+Z35 w1764605270
 8balance_cntrl.sv
 Fbalance_cntrl.sv
 !i122 140
@@ -234,91 +236,91 @@ R20
 R21
 !i113 0
 R22
-R10
+R11
 vinert_intf
-R12
-R13
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/inert_intf.sv
 R14
+R23
 !i10b 1
 !s100 WGn7U<kFaCU_bD:UTM^bY2
-IjD@Zedde`iHfab37`fbU;0
+IUiGL=mRz[fUXIG8_FTgaP3
 S1
-R15
-R23
-8inert_intf.sv
-Finert_intf.sv
-!i122 140
+R24
+R25
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/inert_intf.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/inert_intf.sv
+!i122 166
 L0 1 215
 R17
-R18
+R26
 r1
 !s85 0
 31
-R19
-R20
-R21
+R27
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/inert_intf.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/inert_intf.sv|
 !i113 0
-R22
-R10
+R28
+R11
 vinertial_integrator
-R12
-R13
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/inertial_integrator.sv
 R14
+R23
 !i10b 1
 !s100 D72bA59T;9_j;>Onih;Ha0
-Ibol^VE;MVH9]ce4KamW]23
+I:XWFjzEz`bNEel`Pizdo73
 S1
-R15
-R23
-8inertial_integrator.sv
-Finertial_integrator.sv
-!i122 140
+R24
+R25
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/inertial_integrator.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/inertial_integrator.sv
+!i122 167
 L0 1 54
 R17
-R18
+R26
 r1
 !s85 0
 31
-R19
-R20
-R21
+R27
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/inertial_integrator.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/inertial_integrator.sv|
 !i113 0
-R22
-R10
+R28
+R11
 vmtr_drv
-R12
-R13
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/mtr_drv.sv
 R14
+R23
 !i10b 1
 !s100 7GEG`fk;9kc9eb3XiY6oz0
-I7DcabBE`L`UemhCjS>FC`0
+IHOMUZWB6OL3fFEaOhPK`<2
 S1
-R15
-R23
-8mtr_drv.sv
-Fmtr_drv.sv
-!i122 140
+R24
+R25
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/mtr_drv.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/mtr_drv.sv
+!i122 168
 L0 1 138
 R17
-R18
+R26
 r1
 !s85 0
 31
-R19
-R20
-R21
+R27
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/mtr_drv.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/mtr_drv.sv|
 !i113 0
-R22
-R10
+R28
+R11
 vPB_release
 2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/PB_release.sv
-R13
+R14
 !s110 1764047250
 !i10b 1
 !s100 G8jOI75=6ae5BH^QG;DDO1
 I?i1NjRLG^hO6D@Udmj2QZ2
 S1
-R25
+R24
 w1764001716
 8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/PB_release.sv
 F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/PB_release.sv
@@ -333,19 +335,19 @@ r1
 !s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/PB_release.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/PB_release.sv|
 !i113 0
-R27
-R10
+R28
+R11
 n@p@b_release
 vPID
-R12
 R13
 R14
+R15
 !i10b 1
 !s100 9b8E>klecUA;2e<QSg1J80
 Ih^_;fAWn7?^1U`8>O;;IH2
 S1
-R15
-R23
+R16
+R35
 8PID.sv
 FPID.sv
 !i122 140
@@ -360,43 +362,43 @@ R20
 R21
 !i113 0
 R22
-R10
+R11
 n@p@i@d
 vpiezo_drv
-R12
-R13
+2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv
 R14
-!i10b 1
-!s100 Q1V_=EezL`ZImFJgd4Q4k1
-InV6A4@Z]?QQYzWbK6?YzN2
-S1
-R15
 R23
-8piezo_drv.sv
-Fpiezo_drv.sv
-!i122 140
-L0 1 255
+!i10b 1
+!s100 B<L1UZd4iYnah0oUc@>Fn2
+IMG30<3znNhdA24C6Z;P;]3
+S1
+R24
+w1764781750
+8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv
+F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv
+!i122 169
+L0 1 269
 R17
-R18
+R26
 r1
 !s85 0
 31
-R19
-R20
-R21
+R27
+!s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/piezo_drv.sv|
 !i113 0
-R22
-R10
+R28
+R11
 vPWM11
-R12
 R13
 R14
+R15
 !i10b 1
 !s100 e:71Wi;lO=IAF5i_m39Go0
 Imo8:5Le;X32:L1c5M21YJ2
 S1
-R15
-R23
+R16
+R35
 8PWM11.sv
 FPWM11.sv
 !i122 140
@@ -411,18 +413,18 @@ R20
 R21
 !i113 0
 R22
-R10
+R11
 n@p@w@m11
 vrst_synch
-R12
 R13
 R14
+R15
 !i10b 1
 !s100 AW_Z[ZLfiK7Za68ahnci80
 I6c^?HX]<Najjfo:NE^JXh1
 S1
-R15
-R23
+R16
+R35
 8rst_synch.sv
 Frst_synch.sv
 !i122 140
@@ -437,17 +439,17 @@ R20
 R21
 !i113 0
 R22
-R10
+R11
 vSegway
 2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv
-R13
+R14
 !s110 1764781184
 !i10b 1
 !s100 nXHhRNI3F?[D:n3QiaW5U2
 IK^MkG77h2CaaSa^4HM=JN1
 S1
+R24
 R25
-Z28 w1764780147
 8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv
 F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv
 !i122 159
@@ -461,22 +463,22 @@ r1
 !s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway.sv|
 !i113 0
-R27
-R10
+R28
+R11
 n@segway
 vSegway_Static_tests
-Z29 2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv
-R13
+Z36 2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv
+R14
 DXx4 work 13 tests_package 0 22 ^J21Ca3Z?TM4B:dke8IhM3
 !s110 1764781185
 !i10b 1
 !s100 _M>mYk8NFLMjgBf]nO:WT2
 IXWhOE:o0PS^YMRaABVODU2
 S1
-R25
+R24
 w1764778624
-Z30 8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv
-Z31 F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv
+Z37 8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv
+Z38 F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv
 !i122 160
 L0 3 121
 R17
@@ -486,23 +488,23 @@ r1
 31
 !s108 1764781184.000000
 !s107 tests_package.sv|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv|
-Z32 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv|
+Z39 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv|
 !i113 0
-R27
-R10
+R28
+R11
 n@segway_@static_tests
 vSegway_tb
-R29
-R13
+R36
+R14
 !s110 1764045369
 !i10b 1
 !s100 @^zUSh:=9Fh[D4UXZAUdE2
 IDMHQDG_45bETjK0GPaHLo3
 S1
-R25
+R24
 w1764044772
-R30
-R31
+R37
+R38
 !i122 35
 L0 1 230
 R17
@@ -512,21 +514,21 @@ r1
 31
 !s108 1764045369.000000
 !s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/Segway_Static_tests.sv|
-R32
+R39
 !i113 0
-R27
-R10
+R28
+R11
 n@segway_tb
 vSegwayMath
 2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SegwayMath.sv
-R13
+R14
 !s110 1764781186
 !i10b 1
 !s100 ]jQm0EkVoLogmG[jj9kh<1
 IX9Po7fbHSdWk196`3GE9F3
 S1
+R24
 R25
-R28
 8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SegwayMath.sv
 F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SegwayMath.sv
 !i122 161
@@ -540,19 +542,19 @@ r1
 !s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SegwayMath.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/SegwayMath.sv|
 !i113 0
-R27
-R10
+R28
+R11
 n@segway@math
 vSegwayModel
-R12
 R13
 R14
+R15
 !i10b 1
 !s100 iz^E?Y=h=5@SlL;FS;BlO2
 IH7fgJo?5D8Qde<ePc:]570
 S1
-R15
-R23
+R16
+R35
 8SegwayModel.sv
 FSegwayModel.sv
 !i122 140
@@ -567,18 +569,18 @@ R20
 R21
 !i113 0
 R22
-R10
+R11
 n@segway@model
 vSPI_ADC128S
-R12
 R13
 R14
+R15
 !i10b 1
 !s100 93oj0i;UV@::cHMPGHMJ>1
 I=^ce8_5FGn6;onNThWBb:2
 S1
-R15
-R23
+R16
+R35
 8SPI_ADC128S.sv
 FSPI_ADC128S.sv
 !i122 140
@@ -593,18 +595,18 @@ R20
 R21
 !i113 0
 R22
-R10
+R11
 n@s@p@i_@a@d@c128@s
 vSPI_mnrch
-R12
 R13
 R14
+R15
 !i10b 1
 !s100 `nl@<@G@28c6dW3:5g0KK2
 I31515aAb5YBg8?QJ@5=[f2
 S1
-R15
-R23
+R16
+R35
 8SPI_mnrch.sv
 FSPI_mnrch.sv
 !i122 140
@@ -619,18 +621,18 @@ R20
 R21
 !i113 0
 R22
-R10
+R11
 n@s@p@i_mnrch
 vsteer_en
-R12
 R13
 R14
+R15
 !i10b 1
 !s100 XF961:T^RbXE=WW`gmgc63
 IF7k8l72`;bf^fGFF8kXXU1
 S1
-R15
-R23
+R16
+R35
 8steer_en.sv
 Fsteer_en.sv
 !i122 140
@@ -645,17 +647,17 @@ R20
 R21
 !i113 0
 R22
-R10
+R11
 vsteer_en_SM
-R12
 R13
 R14
+R15
 !i10b 1
 !s100 d6J>A1EJGX:>Ic<[m80[`0
 I:cSJ`<[OENCKlj0TE7miE0
 S1
-R15
-R23
+R16
+R35
 8steer_en_SM.sv
 Fsteer_en_SM.sv
 !i122 140
@@ -670,17 +672,17 @@ R20
 R21
 !i113 0
 R22
-R10
+R11
 nsteer_en_@s@m
 Xtests_package
 2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/tests_package.sv
-R13
-Z33 !s110 1764781187
+R14
+Z40 !s110 1764781187
 !i10b 1
 !s100 A<]aa6^cZX@2EWfH3DYj91
 IC@CFVoX?@Z7XAf9HW:7:W0
 S1
-R25
+R24
 w1764778625
 8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/tests_package.sv
 F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/tests_package.sv
@@ -691,22 +693,22 @@ R26
 r1
 !s85 0
 31
-Z34 !s108 1764781187.000000
+Z41 !s108 1764781187.000000
 !s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/tests_package.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/tests_package.sv|
 !i113 0
-R27
-R10
+R28
+R11
 vUART_RX
-R12
 R13
 R14
+R15
 !i10b 1
 !s100 ^79G:MiO:@H0KYn^3GY[g2
 I61KLP_lDVl;afg0Jl0aD60
 S1
-R15
-R23
+R16
+R35
 8UART_RX.sv
 FUART_RX.sv
 !i122 140
@@ -721,17 +723,17 @@ R20
 R21
 !i113 0
 R22
-R10
+R11
 n@u@a@r@t_@r@x
 vUART_TX
 2/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/UART_TX.sv
-R13
-R33
+R14
+R40
 !i10b 1
 !s100 _V;3Hak9SA__1ngBd5Wl_0
 I[XJHJ8;IQad>L<noj6E<80
 S1
-R25
+R24
 w1764780132
 8/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/UART_TX.sv
 F/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/UART_TX.sv
@@ -742,10 +744,10 @@ R26
 r1
 !s85 0
 31
-R34
+R41
 !s107 /filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/UART_TX.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/a/agminer/ECE551/ECE551_Segway/Final Project Files/UART_TX.sv|
 !i113 0
-R27
-R10
+R28
+R11
 n@u@a@r@t_@t@x

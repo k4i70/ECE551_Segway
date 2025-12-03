@@ -106,8 +106,22 @@ module piezo_drv (
     
     // Avoid dividing by zero or unknown frequency values during initialization
     assign freq_invalid = ((^frequency) === 1'bX) || (frequency == 16'd0);
-    assign period_target = freq_invalid ? 32'd1 :
-                           (FAST_SIM) ? ((50_000_000 / 64) / frequency) : (50_000_000 / frequency);
+
+    // Compute period_target inside a guarded procedural block so the division
+    // is only performed when `frequency` is valid. This prevents simulator
+    // warnings about infinity from dividing by zero or X.
+    always_comb begin
+        if (freq_invalid) begin
+            period_target = 32'd1;
+        end else begin
+            if (FAST_SIM) begin
+                period_target = (50_000_000 / 64) / frequency;
+            end else begin
+                period_target = 50_000_000 / frequency;
+            end
+        end
+    end
+
     assign period_done = (period_cnt >= period_target);
     
     // Piezo output generation
