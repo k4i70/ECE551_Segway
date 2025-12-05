@@ -1,0 +1,88 @@
+# Read in the verilog file first
+read_file -format sverilog { ./A2D_Intf.sv ./ADC128S_FC.sv ./auth_blk.sv ./balance_cntrl.sv ./inert_intf.sv ./inertial_integrator.sv ./mtr_drv.sv ./PB_release.sv ./PID.sv ./piezo_drv.sv ./PWM11.sv ./rst_synch.sv ./Segway.sv ./SegwayMath.sv ./SPI_ADC128S.sv ./SPI_mnrch.sv ./steer_en.sv ./steer_en_SM.sv ./UART_RX.sv ./UART_TX.sv}
+
+#set current design to top level
+set current_design Segway
+
+#create clk signal
+create_clock -name "clk" -period 3 {clk}
+set_clock_uncertainty 0.15 clk
+
+#dont buffer the clock
+set_dont_touch_network [find port clk]
+
+#setting primary inputs
+set prim_inputs [remove_from_collection [all_inputs] [find port clk]]
+
+#setting input delay for clock
+set_input_delay -clock clk 0.25 $prim_inputs
+
+#setting drive strengths
+set_driving_cell -lib_cell NAND2X2_RVT -library saed32rvt_tt0p85v25c $prim_inputs
+
+#adding reset drive strength
+set_drive 0.0001 rst_n
+
+#adding output delay
+set_output_delay -clock clk 0.35 [all_outputs]
+
+#set load capacitances
+set_load 0.05 [all_outputs]
+
+#parasitic caps
+#set_wire_load_mode top
+set_wire_load_model -name 16000 -library saed32rvt_tt0p85v25c
+
+#node transition time
+set_max_transition 0.1 [current_design]
+
+#first compile
+compile -map_effort medium
+
+#setting register paths
+set_multicycle_path 2 -setup -from [find pin iNEMO/ptch_*_reg*/CLK]
+set_multicycle_path 2 -setup -from [find pin iNEMO/AZ*_reg*/CLK]
+set_multicycle_path 1 -hold -from [find pin iNEMO/ptch_*_reg*/CLK]
+set_multicycle_path 1 -hold -from [find pin iNEMO/AZ*_reg*/CLK]
+
+set_multicycle_path 2 -setup -from [find pin iBAL/iCNTRL/ss_tmr_reg*/CLK]
+set_multicycle_path 2 -hold -from [find pin iBAL/iCNTRL/ss_tmr_reg*/CLK]
+
+
+set_boundary_optimization true
+set_optimize_registers true
+set_critical_range 0.25 [current_design]
+set_max_fanout 3 [current_design]
+
+#set_prefer saed32rvt_tt0p85v25c/INVX2_RVT
+#set_dont_use saed32rvt_tt0p85v25c/INVX0_RVT
+#set_dont_use saed32rvt_tt0p85v25c/NAND2X0_RVT
+
+ungroup -all -flatten
+
+#second compile
+set_fix_hold clk
+compile -map_effort high
+
+# Enable aggressive timing optimization
+set_app_var compile_timing_high_effort true
+set_app_var compile_timing_critical_range true
+
+# Multiple incremental high-effort compiles
+compile -incremental_mapping -map_effort high
+compile -incremental_mapping -map_effort high
+compile -incremental_mapping -map_effort high
+
+ungroup -all -flatten
+
+#timing
+report_timing -delay max -sort_by slack -nets -nworst 5 > worst_timing.rpt
+report_timing -delay max
+report_timing -delay min
+
+#report area
+report_area
+report_area > area.rpt
+
+#write out resulting synthesized netlist
+write -format verilog -hierarchy -output Segway.vg

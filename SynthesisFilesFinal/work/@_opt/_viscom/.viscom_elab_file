@@ -1,0 +1,1 @@
+/cae/apps/data/mentor-2024/questasim/linux/VisualizerRls/bin/viscom -nolock -quiet -jmem_size 5505024 work.Segway_post_synth_tb -quiet -auto_acc_if_foreign -work work -L /filespace/a/agminer/ece551/SAED32_lib_RVT +acc -allow_unnamed -o _opt -id 1-000ae431a4f1-69327712-6ffd-2fb658 +__betafsm
